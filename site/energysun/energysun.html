@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="energysun.js"></script>
+	<link rel="stylesheet" href="energysun.css">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<link rel="shortcut icon" href="energysun.png" />
+</head>
+<body>
+	<div class="header">
+		<div class="container">
+			<a href="#"><img src="energysun.png"></a>
+			<h3>Assess how much money you are spending as a user of electronics in the state of North Carolina. Check the box next to which appliances you have used today and then indicate how many hours they have been on.</h3>
+		</div>
+	</div>
+	<div id="dataRetrieve">
+		<h1>Appliances</h1>
+		<div><input type="checkbox" id="onOrNah1"><label class="device">Fridge</label></input></br><label class="hours">Hours per day?</label><input id = "hour1"></input></div>
+	    <div><input type="checkbox" id="onOrNah2"><label>Television</label></input></br><label class="hours">Hours per day?</label><input id = "hour2"></input></div>
+	    <div><input type="checkbox" id="onOrNah3"><label>Laptop</label></input></br><label class="hours">Hours per day?</label><input id = "hour3"></input></div>
+	    <div><input type="checkbox" id="onOrNah4"><label>Desktop</label></input></br><label class="hours">Hours per day?</label><input id = "hour4"></input></div>
+	    <div><input type="checkbox" id="onOrNah5"><label>Fan</label></input></br><label class="hours">Hours per day?</label><input id = "hour5"></input></div>
+	    <div><input type="checkbox" id="onOrNah6"><label>Space Heater</label></input></br><label class="hours">Hours per day?</label><input id = "hour6"></input></div>
+	    <div><input type="checkbox" id="onOrNah7"><label>Microwave</label></input></br><label class="hours">Hours per day?</label><input id = "hour7"></input></div>
+	    <div><input type="checkbox" id="onOrNah8"><label>Phone Charger</label></input></br><label class="hours">Hours per day?</label><input id = "hour8"></input></div>
+	    <div><input type="checkbox" id="onOrNah9"><label>Coffee Maker</label></input></br><label class="hours">Hours per day?</label><input id = "hour9"></input></div>
+	    <button type="button" onclick="getData()">Submit</button>
+    </div>
+    <div id="hidden"><h2>Total per day: <b> <div id = "result"></div></b></h2>
+    <h3>Now this may not seem like a lot...but let's check out what that totals to for each month and in the entire year, considering the same rate and hours of usage<h3>
+    <h2>Total per month: <b><div id = "result2"></div></b></h2>
+    <h2>Total per year: <b><div id = "result3"></div></b></h2></div>
+    <p>Created by Faizan Virani, Arshiya Singh, and Sana Ajani</p>
+</body>
+</html>

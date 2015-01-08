@@ -1,0 +1,72 @@
+body {
+    font-family: "Times New Roman", helvetica, sans-serif, arial;
+    font-size: 14pt;
+    color: white;
+    background-color: #272722;
+    text-align: left;
+}
+a{
+	color: yellow;
+	font-style: italic;
+	text-align: left;
+	width: 5px;
+	font-size: 18pt;
+}
+h1{
+	color: yellow;
+	text-align: center;
+    margin: 20px;
+    padding: 20px;
+    border-style: groove;
+    border-width: 8px;
+    border-left-width: 15px;
+    border-right-width: 15px;
+    border-color: gray;
+    font-family: "Arial Bold","Berlin Sans", helvetica;
+}
+#hip{
+	background-color: rgb(240, 178, 0);
+}
+ul{
+	text-align: left;
+	font-size: 16pt;
+}
+h2{
+	text-align: center;
+	color: white;
+	background-color: #00002A;
+}
+p{
+	text-align: center;
+	font-size: 16pt;
+	margin: auto;
+}
+table{
+	font-size: 16pt;
+	border-spacing: 20px 10px;
+	text-align: left;
+}
+h3{
+	text-align: left;
+	font-style: italic;
+}
+div.head{
+	font-size: 20pt;
+}
+ul{
+	text-align: center;
+	list-style-type: none;
+}
+img{
+	margin-left: 15px;
+	margin-right: 15px;
+	margin-top: 20px;
+}
+#stl{
+	float: center;
+}
+a.download{
+	font-size: 30pt;
+	text-align: center;
+	margin: auto;
+}
