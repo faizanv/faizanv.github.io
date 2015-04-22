@@ -1,15 +1,18 @@
-$("#send").click(
+$(document).ready(function() {
+  $("#send").click(function() {
     send()
-);
+  });
 
-$("input").keypress(function(event) {
-    if (event.which == 13) {
-        event.preventDefault();
-        send()
-    }
-});
+  $("input").keypress(function(event) {
+      if (event.which == 13) {
+          event.preventDefault();
+          $("#send").click();
+      }
+  });
 
-function send() {
+
+
+  function send() {
     var message = $("#msg").val();
     if (message.trim()) {
         $("#msg").val('');
@@ -41,3 +44,4 @@ function send() {
         });
     }
 }
+});
