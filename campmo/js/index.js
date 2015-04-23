@@ -52,7 +52,7 @@ $(document).ready(function() {
     fb.on('child_added', function(snapshot) {
         var snap = snapshot.val();
         console.log(snap.msg);
-        $("#notif").append("<div class='message'><strong>Message: </strong>" + snap.msg + "</br><strong>Detail: </strong>" + snap.detail + "</div>");
+        $("#notif").prepend("<div class='message'><strong>Message: </strong>" + snap.msg + "</br><strong>Detail: </strong>" + snap.detail + "</div>");
     });
 
 });
