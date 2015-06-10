@@ -15,7 +15,9 @@ $(document).ready(function() {
     function send() {
         var message = $("#msg").val();
         var description = $("#description").val();
-        fb.push({sender: "admin", msg: message, detail: description});
+        var d = new Date();
+        var dat = d.getLocaleString();
+        fb.push({sender: "admin", msg: message, detail: description, date: dat});
         if (message.trim()) {
             $("#msg").val('');
             $("#description").val('');
