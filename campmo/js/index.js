@@ -21,7 +21,7 @@ $(document).ready(function() {
             $("#description").val('');
             var submit = {
                 'where': {
-                    'appName': 'CampMo'
+                    'deviceType': 'android'
                 },
                 'data': {
                     'alert': message
