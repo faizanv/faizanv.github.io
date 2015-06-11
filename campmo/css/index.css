@@ -110,3 +110,8 @@
 body {
     background-color: #909090;
 }
+
+#description {
+    height: 100em;
+}
+}
