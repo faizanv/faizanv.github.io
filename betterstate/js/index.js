@@ -15,7 +15,25 @@ $(document).ready(function() {
     function send() {
         var message = $("#msg").val();
         var description = $("#description").val();
-        fb.push({body: message, date: description});
+        var replaced = description.split(' ').join('+');
+        $.ajax({
+            url: 'https://loudelement-free-natural-language-processing-service.p.mashape.com/nlp-text/?text=' + replaced,
+            headers: {
+                "X-Mashape-Key": "9ibVh729CSmshWb3HHNJ8BrGFK6up18OdHdjsn4V3X42xD3JO7",
+                "Accept" : "application/json"
+            },
+            error: function(e) {
+                console.log(e);
+            },
+            success: function(data) {
+                console.log(data["api-author"]);
+                var score = data["sentiment-score"];
+                var sentiment = data["sentiment-text"];
+                fb.push({body: message, date: description, score: score, sentiment: sentiment});
+            },
+            type: 'GET'
+        });
+        //fb.push({body: message, date: description});
     }
 
 
