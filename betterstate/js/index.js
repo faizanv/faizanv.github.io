@@ -15,9 +15,9 @@ $(document).ready(function() {
     function send() {
         var message = $("#msg").val();
         var description = $("#description").val();
-        var replaced = description.split(' ').join('+');
+        //var query= '?text='+encodeURIComponent(description);
         $.ajax({
-            url: 'https://loudelement-free-natural-language-processing-service.p.mashape.com/nlp-text/?text=' + replaced,
+            url: 'https://loudelement-free-natural-language-processing-service.p.mashape.com/nlp-text/?text=' + encodeURIComponent(message),
             headers: {
                 "X-Mashape-Key": "9ibVh729CSmshWb3HHNJ8BrGFK6up18OdHdjsn4V3X42xD3JO7",
                 "Accept" : "application/json"
