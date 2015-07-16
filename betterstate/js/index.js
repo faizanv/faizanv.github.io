@@ -40,7 +40,7 @@ $(document).ready(function() {
     fb.on('child_added', function(snapshot) {
         var snap = snapshot.val();
         console.log(snap.date);
-        $("#notif").prepend("<div class='message'><strong>Message: </strong>" + snap.date + "</br><strong>Detail: </strong>" + snap.body + "</div>");
+        $("#notif").prepend("<div class='message'><strong>Message: </strong>" + snap.date + "</br><strong>Detail: </strong>" + snap.body + "</br><strong>Sentiment: </strong>"+snap.sentiment + " " + snap.score +"</div>");
     });
 
 });
