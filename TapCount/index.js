@@ -10,7 +10,7 @@ fb.child("count").on("value", function(snapshot) {
 });
 
 function go() {
-  console.log("penis");
+  console.log("go");
   var submit = parseInt(count) + 1;
   fb.update({count: submit});
 }
