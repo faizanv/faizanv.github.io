@@ -22,7 +22,7 @@
 			<link rel="stylesheet" href="css/style.css" />
 			<link rel="stylesheet" href="css/style-wide.css" />
 		</noscript>
-		<link rel="shortcut icon" href="images/georgia_tech.png" />
+		<link rel="shortcut icon" href="images/ic_public_black_24dp_1x.png" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 
@@ -36,8 +36,9 @@
 
 					<!-- Logo -->
 						<div id="logo">
-							<span class="image avatar48"><img src="images/avatar.jpg" alt="" /></span>
+							<span class="image avatar48"><img src="images/avatar2.jpg" alt="" /></span>
 							<h1 id="title">Faizan Virani</h1>
+							<p>Georgia Tech '18</p>
 							<p>Developer</p>
 						</div>
 
@@ -88,14 +89,15 @@
 						<div class="container">
 
 							<header>
-								<h2 class="alt"><strong>Faizan Virani<br /> Computer Science<br />
-								 Georgia Tech</strong></h2>
-								<div id="red">View my resume <strong><a target = "_blank"
-									href="http://1drv.ms/1W1toSp"><span id="clicky">HERE</span></a></strong></div>
+								<h2 class="alt"><span id="line1"><strong style="color:green;font-weight:bold;">Faizan</strong> is the name</span></br>
+								<span id="line2">Coding is the game</span>&nbsp;</h2>
+								<!-- <div id="red">View my resume <strong><a target = "_blank"
+									href="http://1drv.ms/1W1toSp"><span id="clicky">HERE</span></a></strong></div> -->
 							</header>
 
 							<footer>
-								<a href="#portfolio" class="button scrolly">Projects</a>
+								<h3>&nbsp;<a href="FaizanViraniResume.pdf" target="_blank" id='resumeLink'>Resume</a></h3>
+								<!-- <a href="http://1drv.ms/1W1toSp" id='resumeLink'>Resume</a> -->
 							</footer>
 
 						</div>
@@ -106,12 +108,12 @@
 						<div class="container">
 
 							<header>
-								<h2><br />Projects</h2>
+								<h2>Projects</h2>
 							</header>
 
-							<p>Below you can see links to some of the projects
+							<!-- <p>Below you can see links to some of the projects
 								I have worked on. Most have been made for hackathons but there are personal projects
-								forthcoming. Check them out and see how you like them.</p>
+								forthcoming. Check them out and see how you like them.</p> -->
 
 							<div class="row">
 								<div class="4u">
@@ -150,7 +152,7 @@
 										</header>
 									</article>
 									<article class="item">
-										<a href="site/studytime.html" class="image fit"><img src="/images/studytime.jpg" alt="" /></a>
+										<a href="site/studytime.html" class="image fit"><img src="images/studytime.jpg" alt="" /></a>
 										<header>
 											<h3>Study Time</h3>
 										</header>
@@ -171,20 +173,10 @@
 
 							<p>I am a Computer Science student at the
 								Georgia Institute of Technology in Atlanta, GA
-								with a concentration on
-								Information Interworks, Intelligence, and Devices. I
-								am pursuing a minor in Music Tehcnology as well as a
-								certificate in Marketing.</p>
-							<p>Currently I am looking for an intership for Summer
-								2015 in the field of Computer Science and Software Engineering.
-								I have experience in web and Android development and can
-								work with Java, JavaScript (with JQuery), PHP, MatLab, and HTML/CSS.</p>
-								<p>Head over to the contact tab to get a hold of me and feel
-								free to ask me any questions.</p>
-							<p>You can download my resume <a href="Faizan Virani Resume.pdf" download>
-								<span id="clicky">HERE</span></a></p>
-							<a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
-
+								with a concentration in
+								Information Interworks and Intelligence.</p>
+							<p>I have most of my experience with Android Development
+								and Web Development with both MEAN stack (learning Angular.js currently) and PHP/MySQL</p>
 						</div>
 					</section>
 
@@ -193,16 +185,14 @@
 						<div class="container">
 
 							<header>
-								<h2>Contact</h2>
+								<h2>Contact Me</h2>
 							</header>
 
-							<p><strong>Faizan Virani</strong><br>Email: <strong>
-							<a target="_blank" href="mailto:fvirani6@gatech.edu">
-							fvirani6@gatech.edu</a></strong><br><strong>325615 Georgia Tech
+							<p><strong style="font-weight:bold;">Faizan Virani</strong>
+							</br><strong><a target="_blank" href="mailto:fvirani6@gatech.edu">
+							fvirani6@gatech.edu</a></strong>
+							<br><strong>325615 Georgia Tech
 							Station<br>Atlanta, GA 30332</strong></p>
-							<p>Download my resume <a href="Faizan Virani Resume.pdf" download>
-								<span id="clicky">HERE</span></a></p>
-
 						</div>
 					</section>
 
@@ -213,7 +203,7 @@
 
 				<!-- Copyright -->
 					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design:
+						<li>&copy; Faizan Virani</li><li>Design:
 							<a href="http://html5up.net">HTML5 UP</a></li>
 					</ul>
 
@@ -229,5 +219,23 @@
 	ga('create', 'UA-61427620-1', 'auto');
 	ga('send', 'pageview');
 
+	</script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+			$("#line1").hide();
+			$("#line2").hide();
+			$("#resumeLink").hide();
+			//$("#line2").css("visibility", "hidden");
+
+			$("#line1").fadeIn( 1000, function() {
+				setTimeout(function(){
+					//$("#line2").css("visibility", "visible");
+					// $("#line2").html("Coding is the game");
+					$("#line2").fadeIn(1000, function() {
+						$("#resumeLink").fadeIn(1000);
+					});
+				}, 400);
+			});
+		});
 	</script>
 </html>
