@@ -66,7 +66,7 @@
 
         <!-- Jumbotron Header -->
         <header class="jumbotron hero-spacer">
-            <h1>Hey, I'm Faizan!</h1>
+            <h1 id="fade1">Hey, I'm Faizan!</h1>
             <p>I'm a Computer Science major at the Georgia Institute of Technology with threads in Information Interworks and Intelligence. My main interests are in Mobile (Android) and Web Development.</p>
             <p><a class="btn btn-primary btn-large" href="FaizanViraniResume.pdf" target="_blank">My Resume</a>
             </p>
@@ -201,7 +201,13 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('#fade1').hide();
 
+        $('#fade1').fadeIn(1000); 
+      });
+    </script>
 </body>
 
 </html>
