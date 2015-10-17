@@ -54,6 +54,7 @@ body {
 .thumbnail {
   box-shadow: 3px 3px 10px #4ea9fb;cursor:pointer;
   border-radius: 20px;
+  min-height: 375px;
 }
 
 .circular {
