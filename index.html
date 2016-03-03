@@ -223,6 +223,7 @@
         // $('#fade1').animate({visibility: visible;}, "slow");
         $('#fade1').css({opacity: 0, visibility: "visible"}).animate({opacity: 1}, 1000, function() {
           $('#fade2').css({opacity: 0, visibility: "visible"}).animate({opacity: 1}, 1000, function () {
+            changeWords();
             $('#fade3').css({opacity: 0, visibility: "visible"}).animate({opacity: 1}, 1000, function() {
               $('#fade4').css({opacity: 0, visibility: "visible"}).animate({opacity: 1}, 1000, function() {
                 $('#fade5').css({opacity: 0, visibility: "visible"}).animate({opacity: 1}, 1000);
@@ -259,7 +260,6 @@
         function changeWords() {
           setInterval(randomGerund, 1000);
         }
-        changeWords();
         //window.setInterval(randomGerund, 1000);
 
       });
