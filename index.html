@@ -247,13 +247,20 @@
           }, 1000);
         });
 
+        var gerunds = ["Coding", "Ballin'", "Node.js", "Developing", "Hacking", "Guessing", "Android", "HackGT"];
+        var index = Math.floor(Math.random() * gerunds.length);
         function randomGerund() {
-          var gerunds = ["Coding", "Ballin'", "Developing", "Hacking", "Guessing", "Android", "Node.js"];
-          var index = Math.floor(Math.random() * gerunds.length);
+          if (index >= gerunds.length) {
+            index = 0;
+          }
           $("#gerund").html(gerunds[index]);
+          index++;
         }
-        randomGerund();
-
+        function changeWords() {
+          setInterval(randomGerund, 1000);
+        }
+        changeWords();
+        //window.setInterval(randomGerund, 1000);
 
       });
     </script>
