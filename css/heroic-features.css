@@ -63,7 +63,7 @@ body {
 	border-radius: 150px;
 	-webkit-border-radius: 150px;
 	-moz-border-radius: 150px;
-	background: url(../images/swamp.jpg) no-repeat;
+	background: url(../images/compressed/swamp-min.jpg) no-repeat;
 	box-shadow: 0 0 25px rgba(255, 255, 255, .8);
 	-webkit-box-shadow: 0 0 25px rgba(255, 255, 255, .8);
 	-moz-box-shadow: 0 0 25px rgba(255, 255, 255, .8);
@@ -82,13 +82,28 @@ body {
 	background: -o-linear-gradient(top,#25A6E1 0%,#188BC0 100%);
 	background: -ms-linear-gradient(top,#25A6E1 0%,#188BC0 100%);
 	background: linear-gradient(top,#25A6E1 0%,#188BC0 100%);
+  border:1px solid #1A87B9
+  border-radius:4px;
+  color:#fff;
 	filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#25A6E1',endColorstr='#188BC0',GradientType=0);
+  font-family:'Helvetica Neue',sans-serif;
+  font-size:17px;
+  -moz-border-radius:4px;
 	padding:8px 13px;
-	color:#fff;
-	font-family:'Helvetica Neue',sans-serif;
-	font-size:17px;
-	border-radius:4px;
-	-moz-border-radius:4px;
 	-webkit-border-radius:4px;
-	border:1px solid #1A87B9
+}
+
+.mainHeader {
+  background-color:transparent;
+  color:#CCCCCC;
+  margin-top:0%;
+  padding-top:0%;
+  text-align:center;
+}
+
+h2 {
+  color:#CCCCCC;
+  font-size:30pt;
+  margin-bottom:3%;
+  margin-left:.25%;
 }
