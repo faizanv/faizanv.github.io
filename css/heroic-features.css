@@ -6,6 +6,8 @@
 
 body {
     padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    background-color: black;
+    font-family: 'Roboto', sans-serif;
 }
 
 .hero-spacer {
@@ -22,10 +24,6 @@ footer {
 
 .thumbnail {
   padding-top: 15%;
-}
-
-body {
-  background-color: black;
 }
 
 /*#fade1 {
