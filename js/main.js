@@ -1,4 +1,7 @@
+var carousel;
 $(document).ready(function() {
+  carousel = $("ul");
+    carousel.itemslide();
   $(".button-collapse").sideNav();
   var des = [
     "I can follow documentation",
