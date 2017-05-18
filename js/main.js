@@ -1,19 +1,15 @@
-var carousel;
 $(document).ready(function() {
-  //carousel = $("ul");
-  // carousel.itemslide();
   $(".button-collapse").sideNav();
   var des = [
     "I can follow documentation",
-    "I go to hackathons",
-    "I worked at SpaceX",
-    "I can Android",
-    "I'm a Yellow Jacket",
-    "I can node.js",
-    "I direct HackGT",
-    "I go to Georgia Tech",
+    "I work at <span class='yellow-text text-darken-1'>Snap Inc.</span>",
+    "I go to <span class='yellow-text text-darken-1'>G</span>eorgia <span class='yellow-text text-darken-1'>T</span>ech",
+    "I direct <span class='teal-text'>HackGT</span>",
+    "I worked at <span class='teal-text'>SpaceX</span>",
+    "I can write code",
     "I can't design",
-    "I will work at Snapchat"
+    "I'm a <span class='yellow-text text-darken-1'>Yellow</span> Jacket",
+    "I can <span class='teal-text'>node.js</span>",
   ];
     var i = 0;
     (function runIt() {

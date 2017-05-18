@@ -19,26 +19,11 @@ body {
    visibility: none;
  }
 
- .nav-wrapper {
-   padding-left: 1%;
-   padding-right: 1%;
+ nav ul a {
+   color: black;
+   font-size: 18pt;
  }
 
- #scrolling { /* Carousel Frame */
-    overflow: hidden;
-}
-
-ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    position: absolute;
-    -webkit-transform-style: preserve-3d;
-    -ms-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-}
-
-li {
-    float: left;
-    background-color: grey;
+ i.icon-black {
+    color: black;
 }
