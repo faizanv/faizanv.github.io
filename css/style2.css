@@ -27,3 +27,11 @@ body {
  i.icon-black {
     color: black;
 }
+
+.pcard {
+  min-height: 400px;
+}
+
+.pcontent {
+  min-height: 120px;
+}
