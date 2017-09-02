@@ -16,7 +16,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Faizan Virani's Blog 
-email: me@faizanv.xyz 
+# email: me@faizanv.xyz 
 description: > # this means to ignore newlines until "baseurl:"
   This blog contains technical tutorials and blog posts from Faizan Virani
 github_username:  faizanv

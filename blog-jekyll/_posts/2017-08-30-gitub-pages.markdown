@@ -81,4 +81,3 @@ Once you finish those steps, you can open http://Github-Username.github.io/ and 
 ![Finished website]({{ site.url }}/blog/assets/github_pages/finished_website.png)
 
 To make updates to your website all you have to do is push changes to the Github repository like we did earlier. You can create a portfolio website, add some pictures, maybe some javascript. Anything is possible!
-
