@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Setup a website with Github Pages</title>
+  <title>Create your free website with Github Pages</title>
   <meta name="description" content="This tutorial will cover how to host a personal static website for free using Github pages as a host.">
 
   <link rel="stylesheet" href="/blog/assets/main.css">
@@ -51,7 +51,7 @@
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">Setup a website with Github Pages</h1>
+    <h1 class="post-title" itemprop="name headline">Create your free website with Github Pages</h1>
     <p class="post-meta">
       <time datetime="2017-08-29T00:26:02-07:00" itemprop="datePublished">
         
@@ -65,11 +65,16 @@
 
 <p>Github Pages is a great and reliable service to help everyone have a little pressence on the web. In fact, this very website is hosted on Github pages! <a href="https://faizanv.github.io/">https://faizanv.github.io/</a></p>
 
-<p>In the end we will have a website running at http://[Github Username].github.io/</p>
+<p>In the end we will have a website running at http://Github-Username.github.io/</p>
 
-<p><img src="/blog/assets/github_pages.jpg" alt="Github pages logo" /></p>
+<p><img src="/blog/assets/github_pages/main.jpg" alt="Github pages logo" /></p>
 <h2 id="prerequisites">Prerequisites</h2>
-<p>For this tutorial you must be familiar with HTML/CSS and be comfortable working in a command line interface as well as using git and have a Github account.</p>
+<p>For this tutorial you must be familiar with:</p>
+<ol>
+  <li>HTML/CSS</li>
+  <li>Working in a command line</li>
+  <li>Using git and having a Github account</li>
+</ol>
 
 <h2 id="getting-started">Getting Started</h2>
 <h1 id="create-repository">Create Repository</h1>
@@ -79,13 +84,25 @@
 
 <p><img src="/blog/assets/github_pages/make_repository.png" alt="New repository screenshot" /></p>
 
-<p>After the repository is created, go ahead and clone the repository to your computer <code class="highlighter-rouge">git clone https://github.com/faizanv/faizanv.github.io.git</code> and change the directory to the cloned folder <code class="highlighter-rouge">cd faizanv.github.io</code></p>
+<p>After the repository is created, go ahead and clone the repository to your computer</p>
+
+<p><code class="highlighter-rouge">git clone https://github.com/faizanv/faizanv.github.io.git</code></p>
+
+<p>and change the directory to the cloned folder</p>
+
+<p><code class="highlighter-rouge">cd faizanv.github.io</code></p>
 
 <h2 id="the-content">The Content</h2>
 
-<p>Before we can host a site on Github Pages, we need a website! We can start with this simple template.</p>
+<p>Before we can host a website on Github Pages, we need to create one! We can start with this simple template.</p>
 
-<p><code class="highlighter-rouge">index.html</code></p>
+<p>Our page will have the folder structure</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>index.html
+stylesheets/
+</code></pre>
+</div>
+
+<h3 id="indexhtml">index.html</h3>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="nt">&lt;head&gt;</span>
@@ -99,7 +116,7 @@
 
 <p>and we can create a simple stylesheet</p>
 
-<p><code class="highlighter-rouge">stylesheets/style.css</code></p>
+<h3 id="stylesheetsstylecss">stylesheets/style.css</h3>
 
 <figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">body</span> <span class="p">{</span>
   <span class="nl">text-align</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
@@ -116,7 +133,7 @@
   <li><code class="highlighter-rouge">git push origin master</code></li>
 </ol>
 
-<p>Once you finish those steps, you can open http://[Github Username].github.io/ and voilà! You have a website!</p>
+<p>Once you finish those steps, you can open http://Github-Username.github.io/ and voilà! You have a website!</p>
 
 <p><img src="/blog/assets/github_pages/finished_website.png" alt="Finished website" /></p>
 
@@ -129,13 +146,13 @@
 <div id="disqus_thread"></div>
 <script>
 var disqus_config = function () {
-this.page.url = "https://faizanv.xyz/blog/gitub-pages.html"; // <--- use canonical URL
+this.page.url = "https://faizanv.xyz/blog//gitub-pages.html"; // <--- use canonical URL
 this.page.identifier = "/gitub-pages";
 };
 (function() { // DON'T EDIT BELOW THIS LINE
 var d = document, s = d.createElement('script');
 
-s.src = '//faizanvirani.disqus.com/embed.js'; // <--- use Disqus shortname
+s.src = '//faizanv.disqus.com/embed.js'; // <--- use Disqus shortname
 
 s.setAttribute('data-timestamp', +new Date());
 (d.head || d.body).appendChild(s);

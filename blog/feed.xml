@@ -1,13 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="/blog/" rel="alternate" type="text/html" /><updated>2017-09-02T00:23:57-07:00</updated><id>/blog/</id><title type="html">Faizan Virani’s Blog</title><subtitle>This blog contains technical tutorials and blog posts from Faizan Virani
-</subtitle><entry><title type="html">Setup a website with Github Pages</title><link href="/blog/gitub-pages.html" rel="alternate" type="text/html" title="Setup a website with Github Pages" /><published>2017-08-29T00:26:02-07:00</published><updated>2017-08-29T00:26:02-07:00</updated><id>/blog/gitub-pages</id><content type="html" xml:base="/blog/gitub-pages.html">&lt;p&gt;This tutorial will cover how to host a personal static website for free using Github pages as a host.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="/blog/" rel="alternate" type="text/html" /><updated>2017-09-02T01:07:17-07:00</updated><id>/blog/</id><title type="html">Faizan Virani’s Blog</title><subtitle>This blog contains technical tutorials and blog posts from Faizan Virani
+</subtitle><entry><title type="html">Create your free website with Github Pages</title><link href="/blog/gitub-pages.html" rel="alternate" type="text/html" title="Create your free website with Github Pages" /><published>2017-08-29T00:26:02-07:00</published><updated>2017-08-29T00:26:02-07:00</updated><id>/blog/gitub-pages</id><content type="html" xml:base="/blog/gitub-pages.html">&lt;p&gt;This tutorial will cover how to host a personal static website for free using Github pages as a host.&lt;/p&gt;
 
 &lt;p&gt;Github Pages is a great and reliable service to help everyone have a little pressence on the web. In fact, this very website is hosted on Github pages! &lt;a href=&quot;https://faizanv.github.io/&quot;&gt;https://faizanv.github.io/&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;In the end we will have a website running at http://[Github Username].github.io/&lt;/p&gt;
+&lt;p&gt;In the end we will have a website running at http://Github-Username.github.io/&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/blog/assets/github_pages.jpg&quot; alt=&quot;Github pages logo&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/assets/github_pages/main.jpg&quot; alt=&quot;Github pages logo&quot; /&gt;&lt;/p&gt;
 &lt;h2 id=&quot;prerequisites&quot;&gt;Prerequisites&lt;/h2&gt;
-&lt;p&gt;For this tutorial you must be familiar with HTML/CSS and be comfortable working in a command line interface as well as using git and have a Github account.&lt;/p&gt;
+&lt;p&gt;For this tutorial you must be familiar with:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;HTML/CSS&lt;/li&gt;
+  &lt;li&gt;Working in a command line&lt;/li&gt;
+  &lt;li&gt;Using git and having a Github account&lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;h2 id=&quot;getting-started&quot;&gt;Getting Started&lt;/h2&gt;
 &lt;h1 id=&quot;create-repository&quot;&gt;Create Repository&lt;/h1&gt;
@@ -17,13 +22,25 @@
 
 &lt;p&gt;&lt;img src=&quot;/blog/assets/github_pages/make_repository.png&quot; alt=&quot;New repository screenshot&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;After the repository is created, go ahead and clone the repository to your computer &lt;code class=&quot;highlighter-rouge&quot;&gt;git clone https://github.com/faizanv/faizanv.github.io.git&lt;/code&gt; and change the directory to the cloned folder &lt;code class=&quot;highlighter-rouge&quot;&gt;cd faizanv.github.io&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;After the repository is created, go ahead and clone the repository to your computer&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git clone https://github.com/faizanv/faizanv.github.io.git&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;and change the directory to the cloned folder&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;cd faizanv.github.io&lt;/code&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;the-content&quot;&gt;The Content&lt;/h2&gt;
 
-&lt;p&gt;Before we can host a site on Github Pages, we need a website! We can start with this simple template.&lt;/p&gt;
+&lt;p&gt;Before we can host a website on Github Pages, we need to create one! We can start with this simple template.&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;index.html&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Our page will have the folder structure&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;index.html
+stylesheets/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;indexhtml&quot;&gt;index.html&lt;/h3&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
@@ -37,7 +54,7 @@
 
 &lt;p&gt;and we can create a simple stylesheet&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;stylesheets/style.css&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&quot;stylesheetsstylecss&quot;&gt;stylesheets/style.css&lt;/h3&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nt&quot;&gt;body&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;nl&quot;&gt;text-align&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;center&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
@@ -54,7 +71,7 @@
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git push origin master&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;Once you finish those steps, you can open http://[Github Username].github.io/ and voilà! You have a website!&lt;/p&gt;
+&lt;p&gt;Once you finish those steps, you can open http://Github-Username.github.io/ and voilà! You have a website!&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/blog/assets/github_pages/finished_website.png&quot; alt=&quot;Finished website&quot; /&gt;&lt;/p&gt;
 
