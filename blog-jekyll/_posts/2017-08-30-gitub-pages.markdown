@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Create your free website with Github Pages"
+title:  "Create your website with Github Pages"
 date:   2017-08-29 00:26:02 -0700
 categories: tutorials 
 comments: true
