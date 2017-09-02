@@ -3,6 +3,7 @@ layout: post
 title:  "Setup a website with Github Pages"
 date:   2017-08-29 00:26:02 -0700
 categories: tutorials 
+comments: true
 ---
 This tutorial will cover how to host a personal static website for free using Github pages as a host.
 

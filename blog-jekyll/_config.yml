@@ -1,3 +1,5 @@
+# deply command: bundle exec jekyll build
+
 # Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your whole blog, values
@@ -41,3 +43,6 @@ baseurl: /blog
 
 # Permalink Settings
 permalink: /:slug.html
+
+# Environment
+environment: production
