@@ -1,0 +1,3 @@
+[submodule "resume-template"]
+	path = resume-template
+	url = https://github.com/faizanv/resume-template.git

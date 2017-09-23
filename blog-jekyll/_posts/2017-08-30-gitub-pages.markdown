@@ -8,7 +8,7 @@ avatar: github_pages/main.jpg
 ---
 This tutorial will cover how to host a personal static website for free using Github pages as a host.
 
-Github Pages is a great and reliable service to help everyone have a little pressence on the web. In fact, this very website is hosted on Github pages! [https://faizanv.github.io/](https://faizanv.github.io/)
+Github Pages is a great and reliable service to help everyone have a little presence on the web. In fact, this very website is hosted on Github pages! [https://faizanv.github.io/](https://faizanv.github.io/)
 
 In the end we will have a website running at http://Github-Username.github.io/
 
@@ -16,7 +16,7 @@ In the end we will have a website running at http://Github-Username.github.io/
 ## Prerequisites
 For this tutorial you must be familiar with:
 1. HTML/CSS
-2. Working in a command line
+2. Working in a command line or terminal
 3. Using git and having a Github account
 
 ## Getting Started
@@ -28,6 +28,8 @@ So for example, if my Github username is faizanv, my repository would be named f
 ![New repository screenshot]({{ site.url }}/blog/assets/github_pages/make_repository.png)
 
 After the repository is created, go ahead and clone the repository to your computer
+
+Open your terminal or command prompt and navigate to folder where you want to save your website files. Once you're there, go ahead and clone your new repository to that folder (your cloning link can be found on the Github website for your repository)
 
 `git clone https://github.com/faizanv/faizanv.github.io.git`
 
