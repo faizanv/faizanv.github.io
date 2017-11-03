@@ -1,3 +1,8 @@
+import $ from 'jquery';
+import 'materialize-css';
+import 'materialize-css/dist/css/materialize.min.css';
+import '../css/style2.css';
+
 $(document).ready(function() {
   $(".button-collapse").sideNav();
   var des = [
