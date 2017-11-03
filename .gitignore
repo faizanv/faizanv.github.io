@@ -2,3 +2,5 @@
 .ssh
 blog-jekyll/.jekyll-metadata
 blog-jekyll/_site
+node_modules
+dist
