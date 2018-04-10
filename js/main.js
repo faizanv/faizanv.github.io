@@ -7,6 +7,7 @@ $(document).ready(function() {
   $(".button-collapse").sideNav();
   var des = [
     "<span class='teal-text'>Node.js</span>",
+    "New Grad Software Engineer at <span class='pink-text text-lighten-2'>Lyft</span>",
     "Intern at <span class='orange-text'>Amazon</span> Fall 2017",
     "<span class='yellow-text text-darken-2'>G</span>eorgia <span class='yellow-text text-darken-2'>T</span>ech Class of 2018",
     "<span class='yellow-text text-darken-2'>Snap Inc.</span> Summer 2017",

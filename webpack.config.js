@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const ExtractTextPluginConfig = new ExtractTextPlugin({
@@ -46,5 +47,5 @@ module.exports = {
       }
     ]
   },
-  plugins: [ExtractTextPluginConfig]
+  plugins: [ExtractTextPluginConfig, new webpack.optimize.UglifyJsPlugin()]
 };
