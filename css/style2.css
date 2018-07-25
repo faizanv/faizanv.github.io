@@ -1,5 +1,21 @@
-body {
+/* body {
+  color: white;
   font-family: 'Slabo 27px', serif;
+}
+
+.left-side {
+  background: url('../images/central-park.jpg') no-repeat center top fixed;
+  background-size: cover;
+}
+
+.main-container {
+  background-color: rgba(211, 211, 211, 0.9);
+}
+
+.link-button {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 0 1.25rem;
 }
 
 #mainPic {
@@ -10,22 +26,22 @@ body {
   height: 100vh;
 }
 
- .proj-img {
-   width: auto;
-   height: 230px;
- }
+.proj-img {
+  width: auto;
+  height: 230px;
+}
 
- .quotes {
-   visibility: none;
- }
+.quotes {
+  visibility: none;
+}
 
- nav ul a {
-   color: black;
-   font-size: 18pt;
- }
+nav ul a {
+  color: black;
+  font-size: 18pt;
+}
 
- i.icon-black {
-    color: black;
+i.icon-black {
+  color: black;
 }
 
 .pcard {
@@ -34,4 +50,58 @@ body {
 
 .pcontent {
   min-height: 120px;
+} */
+
+body {
+  font-family: 'Source Sans Pro', Helvetica, sans-serif;
+}
+
+h1 {
+  font-size: 35pt;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 20pt;
+  margin-bottom: 0px;
+  font-weight: 300;
+  text-decoration: underline;
+}
+
+ul {
+  list-style-type: disc;
+  margin: 10px 1em;
+  font-size: 16pt;
+  font-weight: 300;
+}
+
+li::before {
+  content: "\2014\a0";
+}
+
+.row {
+  margin-bottom: 0px;
+}
+
+.left-side {
+  height: 110vh;
+  background: url('../images/central-park.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: -10vw 40%;
+  background-size: cover;
+}
+
+.gradiented-text {
+  background: linear-gradient(#0089ec, #ff00be);
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
+.links-list {
+  font-size: 22pt;
+}
+
+.links-list > a {
+  margin-right: .5em;
 }

@@ -7,10 +7,11 @@
   "author": "faizanv <faizan.virani.44@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server --colors --hot --inline",
+    "start": "webpack --watch",
     "build": "webpack -p"
   },
   "dependencies": {
+    "autoprefixer": "^9.0.1",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-plugin-transform-runtime": "^6.23.0",
@@ -22,6 +23,7 @@
     "file-loader": "^1.1.5",
     "jquery": "^3.2.1",
     "materialize-css": "^0.100.2",
+    "postcss-loader": "^2.1.6",
     "style-loader": "^0.19.0",
     "webpack": "^3.8.1",
     "webpack-dev-server": "^2.9.4"
