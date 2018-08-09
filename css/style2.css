@@ -1,57 +1,3 @@
-/* body {
-  color: white;
-  font-family: 'Slabo 27px', serif;
-}
-
-.left-side {
-  background: url('../images/central-park.jpg') no-repeat center top fixed;
-  background-size: cover;
-}
-
-.main-container {
-  background-color: rgba(211, 211, 211, 0.9);
-}
-
-.link-button {
-  border: 1px solid black;
-  border-radius: 10px;
-  padding: 0 1.25rem;
-}
-
-#mainPic {
-  width: 70%;
-}
-
-#section1 {
-  height: 100vh;
-}
-
-.proj-img {
-  width: auto;
-  height: 230px;
-}
-
-.quotes {
-  visibility: none;
-}
-
-nav ul a {
-  color: black;
-  font-size: 18pt;
-}
-
-i.icon-black {
-  color: black;
-}
-
-.pcard {
-  min-height: 400px;
-}
-
-.pcontent {
-  min-height: 120px;
-} */
-
 body {
   font-family: 'Source Sans Pro', Helvetica, sans-serif;
 }
@@ -93,9 +39,12 @@ li::before {
 }
 
 .gradiented-text {
-  background: linear-gradient(#0089ec, #ff00be);
+  background: linear-gradient(#039be5, #ff00be);
+  background: webkit-linear-gradient(#039be5, #ff00be);
   color: transparent;
+  background-clip: text;
   -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .links-list {
