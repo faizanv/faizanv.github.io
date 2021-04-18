@@ -11,7 +11,7 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "deploy": "gatsby build && gh-pages -d public -b main"
+    "deploy": "gatsby build && gh-pages -d public -b master"
   },
   "dependencies": {
     "@fontsource/montserrat": "^4.2.2",
