@@ -1,0 +1,27 @@
+.headerSection {
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    @media (min-width: 43em){
+        flex-direction: row;
+    }
+}
+
+.textSection {
+    margin: 0 8px;
+}
+
+.bioList  {
+    list-style-type: none;
+    padding: 0;
+    line-height: 2rem;
+    text-align: center;
+
+    @media (min-width: 43em){
+        text-align: right;
+    }
+}

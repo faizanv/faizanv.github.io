@@ -1,0 +1,22 @@
+.footerStyles {
+    flex-shrink: 0;
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.connectLink {
+    color: rgb(233, 240, 240);
+    font-size: 3rem;
+    transition: font-size 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0s;
+    transition: transform 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0s;
+    margin: 0 16px;
+
+    &:hover {
+        font-size: 3.5rem;
+        transform: translateY(-0.5rem);
+        margin-top: -1.5rem;
+    }
+}

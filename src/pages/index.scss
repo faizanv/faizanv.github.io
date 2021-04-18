@@ -1,0 +1,27 @@
+body {
+    font-family: 'Montserrat', 'Helvetica', -apple-system;
+    background-color: rgb(93, 155, 251);
+    color: rgb(233, 240, 240);
+    margin: 0;
+}
+
+.site {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main {
+    flex: 1 0 auto;
+    display: flex;
+}
+
+h1 {
+    font-size: 2.441rem;
+}
+
+a {
+    color: #EDC7CF;
+    font-weight: bold;
+}
