@@ -1,0 +1,36 @@
+{
+  "name": "faizanv.github.io",
+  "version": "1.0.0",
+  "private": true,
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "deploy": "gatsby build && gh-pages -d public -b gh-pages"
+  },
+  "dependencies": {
+    "@fontsource/montserrat": "^4.2.2",
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-brands-svg-icons": "^5.15.3",
+    "@fortawesome/free-regular-svg-icons": "^5.15.3",
+    "@fortawesome/react-fontawesome": "^0.1.14",
+    "gatsby": "^3.2.1",
+    "gatsby-plugin-google-analytics": "^3.3.0",
+    "gatsby-plugin-image": "^1.3.0",
+    "gatsby-plugin-sass": "^4.3.0",
+    "gatsby-plugin-sharp": "^3.3.0",
+    "gatsby-source-filesystem": "^3.3.0",
+    "gatsby-transformer-sharp": "^3.3.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "sass": "^1.32.10"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
+  }
+}

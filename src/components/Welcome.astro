@@ -1,0 +1,200 @@
+---
+import headshot from "../assets/headshot.png";
+import Links from "./Links.astro";
+---
+
+<main>
+  <img
+    id="headshot"
+    src={headshot.src}
+    alt="headshot image of Faizan Virani"
+    fetchpriority="low"
+    height="250"
+  />
+  <section id="hero">
+    <h1>
+      Looking for <code class="bouncing-icon"><pre>Faizan Virani</pre></code>?
+    </h1>
+    <ul class="description-list">
+      <li><span class="bouncing-icon">📍</span> He(Him)'s in New York</li>
+      <li>
+        <span class="bouncing-icon">💼</span> Senior Software Engineer for all your
+        fullstack needs
+      </li>
+      <li>
+        <span class="bouncing-icon">👀</span> Looking for a job <a
+          href="https://rxresu.me/faizanv/senior-software-engineer"
+          target="_blank"
+          rel="noopener">(resume)</a>
+      </li>
+      <li>
+        <span class="bouncing-icon">🎵</span> Also makes music <a
+          href="https://soundcloud.com/faizanv"
+          target="_blank"
+          rel="noopener">(soundcloud)</a>
+      </li>
+    </ul>
+    <button type="button" id="enable-rotation">
+      Click here to activate party mode
+    </button>
+  </section>
+  <Links />
+</main>
+
+<style>
+  main {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+
+    @media screen and ((max-width: 768px) or (max-height: 500px)) {
+      flex-direction: column;
+    }
+  }
+
+  #hero {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: center;
+    padding: 16px;
+  }
+
+  #headshot {
+    transform 0.1s ease-out;
+  }
+
+  h1 {
+    margin-block: 0.67em;
+      font-size: 2em;
+
+    @media screen and ((max-width: 768px) or (max-height: 500px)) {
+        width: 100%;
+        text-align: center;
+    }
+  }
+
+  .description-list {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    font-size: 18px;
+  }
+
+  pre {
+    font-family: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo,
+      Consolas, "DejaVu Sans Mono", monospace;
+    font-weight: normal;
+    background: linear-gradient(14deg, #d83333 0%, #f041ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0;
+  }
+
+  code {
+    display: inline-block;
+    background:
+      linear-gradient(66.77deg, #f3cddd 0%, #f5cee7 100%) padding-box,
+      linear-gradient(155deg, #d83333 0%, #f041ff 18%, #f5cee7 45%) border-box;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 6px 8px;
+  }
+
+  .box {
+    padding: 16px;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 16px;
+    border: 1px solid white;
+  }
+
+  .bouncing-icon {
+    display: inline-block;
+    animation: hithere 1.5s ease 1;
+  }
+  @keyframes hithere {
+    30% {
+      transform: scale(1.2);
+    }
+    40%,
+    60% {
+      transform: rotate(-20deg) scale(1.2);
+    }
+    50% {
+      transform: rotate(20deg) scale(1.2);
+    }
+    70% {
+      transform: rotate(0deg) scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+    .description-list li:nth-child(1) .bouncing-icon {
+        animation-delay: 1s;
+    }
+    .description-list li:nth-child(2) .bouncing-icon {
+        animation-delay: 2s;
+    }
+    .description-list li:nth-child(3) .bouncing-icon {
+        animation-delay: 3s;
+    }
+    .description-list li:nth-child(4) .bouncing-icon {
+        animation-delay: 4s;
+    }
+
+    #enable-rotation {
+        display: none;
+
+        @media screen and ((max-width: 768px) or (max-height: 500px)) {
+            display: block;
+            margin-top: 16px;
+            padding: 4px 8px;
+            color: white;
+            border-radius: 100px;
+            font-size: 14px;
+            background: #2A7B9B;
+            background: linear-gradient(90deg,rgba(42, 123, 155, 1) 0%, rgba(50, 140, 85, 1) 50%, rgba(193, 83, 237, 1) 100%);
+        }
+    }
+</style>
+
+<script>
+    import headshotParty from "../assets/headshot-party.png";
+    
+    const orientationListener = function(e: DeviceOrientationEvent) {
+        requestAnimationFrame(() => {
+            const headshot = document.getElementById('headshot');
+            if (headshot) {
+                // rotate around z so it looks like it's following the phone
+                const rotateZ = e.gamma ?? 0; // left to right
+                const rotateY = e.beta ?? 0; // front to back
+                // headshot.style.transform = `rotateZ(${rotateZ}deg) rotateY(-${rotateY}deg)`;
+                // only rotate around z axis for now
+                headshot.style.transform = `rotate(${rotateZ}deg)`;
+                const bouncingIcons = document.getElementsByClassName('bouncing-icon');
+                Array.from(bouncingIcons).forEach((icon) => {
+                    (icon as HTMLElement).style.transform = `rotate(${rotateZ}deg)`;
+                });
+
+            }
+        })
+    };
+    document.getElementById('enable-rotation')?.addEventListener('click', () => {
+        if (window.DeviceOrientationEvent) {
+            (document.getElementById('enable-rotation') as HTMLButtonElement).style.visibility = 'hidden';
+            const headshot = document.getElementById('headshot') as HTMLImageElement;
+            headshot.src = headshotParty.src;
+            window.addEventListener('deviceorientation', orientationListener, false);
+        }
+    });
+</script>

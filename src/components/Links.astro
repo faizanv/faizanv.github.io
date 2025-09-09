@@ -1,0 +1,126 @@
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  type="text/css"
+/>
+
+<ul class="social">
+  <li data-tooltip="Resume" style="--bg: #3a83f7">
+    <a href="https://rxresu.me/faizanv/senior-software-engineer"aria-label="Resume">
+      <i class="fa-regular fa-file"></i>
+    </a>
+  </li>
+
+  <li
+    data-tooltip="Instagram"
+    style="--bg: linear-gradient(-45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5)"
+  >
+    <a href="https://www.instagram.com/faizanv" aria-label="Instagram">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+  </li>
+
+  <li data-tooltip="Github" style="--bg: #101419">
+    <a href="https://github.com/faizanv" aria-label="Github">
+      <i class="fa-brands fa-github"></i>
+    </a>
+  </li>
+
+  <li data-tooltip="Soundcloud" style="--bg: #f50">
+    <a href="https://soundcloud.com/faizanv" aria-label="Soundcloud">
+      <i class="fa-brands fa-soundcloud"></i>
+    </a>
+  </li>
+</ul>
+
+<style>
+  .social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    list-style: none;
+    flex-direction: column;
+    padding: 0;
+    width: 60px;
+
+    @media screen and ((max-width: 768px) or (max-height: 500px)) {
+        flex-direction: row;
+        width: 100%;
+    }
+}
+
+  .social li {
+    position: relative;
+    flex-basis: 4.5rem;
+  }
+
+  .social li::after {
+    position: absolute;
+    /* content: "Tooltip"; */
+    content: attr(data-tooltip);
+    inset: -45% auto auto 50%;
+    z-index: 1;
+    translate: -50%;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.875rem;
+    color: #fff;
+    /* background: #070707; */
+    background: var(--bg, #070707);
+    border-radius: 0.25rem;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    /* transition: all 0.3s ease-in-out; */
+    transition:
+      inset 0.4s cubic-bezier(0.47, 2, 0.41, 1.5),
+      visibility 0.3s ease-in-out,
+      opacity 0.2s ease-in-out;
+  }
+
+  .social li:has(a:hover, a:focus-visible)::after {
+    opacity: 1;
+    visibility: visible;
+    inset-block-start: -60%;
+  }
+
+  .social a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1;
+    font-size: 20px;
+    color: #070707;
+    border: 1px solid;
+    border-radius: 100%;
+    text-decoration: none;
+    outline: none;
+    overflow: hidden;
+    transition: color 0.3s ease-in-out;
+  }
+
+  .social a > i {
+    position: relative;
+    z-index: 1;
+  }
+
+  .social a::after {
+    position: absolute;
+    content: "";
+    inset: 100% 0 0;
+    /* background: #070707; */
+    background: var(--bg, #070707);
+    pointer-events: none;
+    transition: inset 0.3s ease-in-out;
+  }
+
+  .social a:hover,
+  .social a:focus-visible {
+    color: #fff;
+  }
+
+  .social a:hover::after,
+  .social a:focus-visible::after {
+    inset-block-start: 0;
+  }
+</style>
