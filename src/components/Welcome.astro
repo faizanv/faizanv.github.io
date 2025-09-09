@@ -16,7 +16,7 @@ import Links from "./Links.astro";
       Looking for <code class="bouncing-icon"><pre>Faizan Virani</pre></code>?
     </h1>
     <ul class="description-list">
-      <li><span class="bouncing-icon">📍</span> He/Him's in New York</li>
+      <li><span class="bouncing-icon">📍</span> He(Him)'s in New York</li>
       <li>
         <span class="bouncing-icon">💼</span> Senior Software Engineer for all your
         fullstack needs
@@ -25,14 +25,17 @@ import Links from "./Links.astro";
         <span class="bouncing-icon">👀</span> Looking for a job <a
           href="https://www.linkedin.com/in/faizanv/"
           target="_blank"
-          rel="noopener">(my LinkedIn)</a>
+          rel="noopener">(my LinkedIn)</a
+        >
       </li>
       <li>
         <span class="bouncing-icon">🎵</span> Also makes music <a
           href="https://soundcloud.com/faizanv"
           target="_blank"
-          rel="noopener">(soundcloud)</a>
+          rel="noopener">(soundcloud)</a
+        >
       </li>
+      <li id="mobile-surprise">(open on mobile for a surprise)</li>
     </ul>
     <button type="button" id="enable-rotation">
       Click here to activate party mode
@@ -69,11 +72,11 @@ import Links from "./Links.astro";
 
   h1 {
     margin-block: 0.67em;
-      font-size: 2em;
+    font-size: 2em;
 
     @media screen and ((max-width: 768px) or (max-height: 500px)) {
-        width: 100%;
-        text-align: center;
+      width: 100%;
+      text-align: center;
     }
   }
 
@@ -106,7 +109,8 @@ import Links from "./Links.astro";
       linear-gradient(155deg, #d83333 0%, #f041ff 18%, #f5cee7 45%) border-box;
     border-radius: 8px;
     border: 1px solid transparent;
-    padding: 6px 8px;
+    padding: 8px;
+    margin-right: 4px;
   }
 
   .box {
@@ -139,80 +143,127 @@ import Links from "./Links.astro";
     }
   }
 
-    .description-list li:nth-child(1) .bouncing-icon {
-        animation-delay: 1s;
-    }
-    .description-list li:nth-child(2) .bouncing-icon {
-        animation-delay: 2s;
-    }
-    .description-list li:nth-child(3) .bouncing-icon {
-        animation-delay: 3s;
-    }
-    .description-list li:nth-child(4) .bouncing-icon {
-        animation-delay: 4s;
-    }
+  .description-list li:nth-child(1) .bouncing-icon {
+    animation-delay: 1s;
+  }
+  .description-list li:nth-child(2) .bouncing-icon {
+    animation-delay: 2s;
+  }
+  .description-list li:nth-child(3) .bouncing-icon {
+    animation-delay: 3s;
+  }
+  .description-list li:nth-child(4) .bouncing-icon {
+    animation-delay: 4s;
+  }
 
-    #enable-rotation {
-        display: none;
+  #enable-rotation {
+    display: none;
 
-        @media screen and ((max-width: 768px) or (max-height: 500px)) {
-            display: block;
-            margin-top: 16px;
-            padding: 4px 8px;
-            color: white;
-            border-radius: 100px;
-            font-size: 14px;
-            background: #2A7B9B;
-            background: linear-gradient(90deg,rgba(42, 123, 155, 1) 0%, rgba(50, 140, 85, 1) 50%, rgba(193, 83, 237, 1) 100%);
-        }
+    @media screen and ((max-width: 768px) or (max-height: 500px)) {
+      display: block;
+      margin-top: 16px;
+      padding: 4px 8px;
+      color: white;
+      border-radius: 100px;
+      font-size: 14px;
+      background: #2a7b9b;
+      background: linear-gradient(
+        90deg,
+        rgba(42, 123, 155, 1) 0%,
+        rgba(50, 140, 85, 1) 50%,
+        rgba(193, 83, 237, 1) 100%
+      );
     }
+  }
+
+  #mobile-surprise {
+    display: block;
+    color: rgba(42, 123, 155, 1);
+    font-size: 14px;
+
+    @media screen and ((max-width: 768px) or (max-height: 500px)) {
+      display: none;
+    }
+  }
 </style>
 
 <script>
-    import headshotParty from "../assets/headshot-party.png";
-    
-    const orientationListener = function(e: DeviceOrientationEvent) {
-        requestAnimationFrame(() => {
-            const headshot = document.getElementById('headshot');
-            if (headshot) {
-                // rotate around z so it looks like it's following the phone
-                const rotateZ = e.gamma ?? 0; // left to right
-                const rotateY = e.beta ?? 0; // front to back
-                // headshot.style.transform = `rotateZ(${rotateZ}deg) rotateY(-${rotateY}deg)`;
-                // only rotate around z axis for now
-                headshot.style.transform = `rotate(${rotateZ}deg)`;
-                const bouncingIcons = document.getElementsByClassName('bouncing-icon');
-                Array.from(bouncingIcons).forEach((icon) => {
-                    (icon as HTMLElement).style.transform = `rotate(${rotateZ}deg)`;
-                });
+  import headshotParty from "../assets/headshot-party.png";
+  import confetti from "canvas-confetti";
 
-            }
-        })
-    };
-    interface DeviceOrientationEventiOS extends DeviceOrientationEvent {
-      requestPermission?: () => Promise<'granted' | 'denied'>;
-    }
-    document.getElementById('enable-rotation')?.addEventListener('click', () => {
-        const deviceOrientationEvent = window.DeviceOrientationEvent as unknown as DeviceOrientationEventiOS;
-        if (deviceOrientationEvent.requestPermission) {
-            // iOS 13+
-            deviceOrientationEvent.requestPermission()
-                .then((response) => {
-                    if (response === 'granted') {
-                        (document.getElementById('enable-rotation') as HTMLButtonElement).style.visibility = 'hidden';
-                        const headshot = document.getElementById('headshot') as HTMLImageElement;
-                        headshot.src = headshotParty.src;
-                        window.addEventListener('deviceorientation', orientationListener, false);
-                    } else {
-                        alert('Permission not granted to access device orientation');
-                    }
-                })
-                .catch(console.error);
-        } else if (window.DeviceOrientationEvent) {
-            (document.getElementById('enable-rotation') as HTMLButtonElement).style.visibility = 'hidden';
-            const headshot = document.getElementById('headshot') as HTMLImageElement;
-            headshot.src = headshotParty.src;
-            window.addEventListener('deviceorientation', orientationListener, false);
-        }
+  const orientationListener = function (e: DeviceOrientationEvent) {
+    requestAnimationFrame(() => {
+      const headshot = document.getElementById("headshot");
+      const bouncingIcons = document.getElementsByClassName("bouncing-icon");
+      if (headshot) {
+        const rotateZ = e.gamma ?? 0; // left to right
+        headshot.style.transform = `rotate(${360 - rotateZ}deg)`;
+        
+        Array.from(bouncingIcons).forEach((icon) => {
+          (icon as HTMLElement).style.transform = `rotate(${rotateZ}deg)`;
+        });
+      }
     });
+  };
+  interface DeviceOrientationEventiOS extends DeviceOrientationEvent {
+    requestPermission?: () => Promise<"granted" | "denied">;
+  }
+  document.getElementById("enable-rotation")?.addEventListener("click", () => {
+    const deviceOrientationEvent =
+      window.DeviceOrientationEvent as unknown as DeviceOrientationEventiOS;
+    if (deviceOrientationEvent.requestPermission) {
+      // iOS
+      deviceOrientationEvent
+        .requestPermission()
+        .then((response) => {
+          if (response === "granted") {
+            window.addEventListener(
+              "deviceorientation",
+              orientationListener,
+              false
+            );
+          } else {
+            alert("Permission not granted to access device orientation");
+          }
+        })
+        .catch(console.error);
+    } else if (window.DeviceOrientationEvent) {
+      window.addEventListener("deviceorientation", orientationListener, false);
+    }
+    (
+      document.getElementById("enable-rotation") as HTMLButtonElement
+    ).style.visibility = "hidden";
+    const headshot = document.getElementById("headshot") as HTMLImageElement;
+    headshot.src = headshotParty.src;
+
+    // confetti
+    var duration = 5 * 1000;
+    var animationEnd = Date.now() + duration;
+    var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+
+    function randomInRange(min: number, max: number) {
+      return Math.random() * (max - min) + min;
+    }
+
+    var interval = setInterval(function () {
+      var timeLeft = animationEnd - Date.now();
+
+      if (timeLeft <= 0) {
+        return clearInterval(interval);
+      }
+
+      var particleCount = 50 * (timeLeft / duration);
+      // since particles fall down, start a bit higher than random
+      confetti({
+        ...defaults,
+        particleCount,
+        origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
+      });
+      confetti({
+        ...defaults,
+        particleCount,
+        origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
+      });
+    }, 250);
+  });
 </script>
