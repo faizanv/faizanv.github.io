@@ -189,8 +189,26 @@ import Links from "./Links.astro";
             }
         })
     };
+    interface DeviceOrientationEventiOS extends DeviceOrientationEvent {
+      requestPermission?: () => Promise<'granted' | 'denied'>;
+    }
     document.getElementById('enable-rotation')?.addEventListener('click', () => {
-        if (window.DeviceOrientationEvent) {
+        const deviceOrientationEvent = window.DeviceOrientationEvent as unknown as DeviceOrientationEventiOS;
+        if (deviceOrientationEvent.requestPermission) {
+            // iOS 13+
+            deviceOrientationEvent.requestPermission()
+                .then((response) => {
+                    if (response === 'granted') {
+                        (document.getElementById('enable-rotation') as HTMLButtonElement).style.visibility = 'hidden';
+                        const headshot = document.getElementById('headshot') as HTMLImageElement;
+                        headshot.src = headshotParty.src;
+                        window.addEventListener('deviceorientation', orientationListener, false);
+                    } else {
+                        alert('Permission not granted to access device orientation');
+                    }
+                })
+                .catch(console.error);
+        } else if (window.DeviceOrientationEvent) {
             (document.getElementById('enable-rotation') as HTMLButtonElement).style.visibility = 'hidden';
             const headshot = document.getElementById('headshot') as HTMLImageElement;
             headshot.src = headshotParty.src;
