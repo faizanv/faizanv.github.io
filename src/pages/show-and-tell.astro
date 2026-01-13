@@ -1,0 +1,99 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+	<main>
+		<h1>Show and Tell</h1>
+		<p>Welcome to my audio showcase! Here you can listen to and download audio files I'd like to share.</p>
+		
+		<div class="audio-section">
+			<h2>Tera Chera (Dub?)</h2>
+			<div class="audio-player">
+				<audio controls preload="metadata">
+					<source src="/TeraCheraV1.wav" type="audio/wav">
+					Your browser does not support the audio element.
+				</audio>
+			</div>
+			<div class="download-section">
+				<a href="/TeraCheraV1.wav" download="TeraCheraV1.wav" class="download-button">
+					Download .wav
+				</a>
+			</div>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	main {
+		max-width: 800px;
+		margin: 0 auto;
+		padding: 2rem;
+	}
+
+	h1 {
+		color: #333;
+		text-align: center;
+		margin-bottom: 1rem;
+	}
+
+	p {
+		text-align: center;
+		margin-bottom: 2rem;
+		color: #666;
+	}
+
+	.audio-section {
+		background: #f8f9fa;
+		border-radius: 12px;
+		padding: 2rem;
+		margin-bottom: 2rem;
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	}
+
+	h2 {
+		color: #333;
+		margin-bottom: 1rem;
+		text-align: center;
+	}
+
+	.audio-player {
+		text-align: center;
+		margin-bottom: 1.5rem;
+	}
+
+	audio {
+		width: 100%;
+		max-width: 500px;
+		border-radius: 8px;
+	}
+
+	.download-section {
+		text-align: center;
+	}
+
+	.download-button {
+		display: inline-block;
+		background: #007acc;
+		color: white;
+		padding: 0.75rem 1.5rem;
+		text-decoration: none;
+		border-radius: 6px;
+		font-weight: 500;
+		transition: background-color 0.2s ease;
+	}
+
+	.download-button:hover {
+		background: #005a9d;
+	}
+
+	@media (max-width: 768px) {
+		main {
+			padding: 1rem;
+		}
+		
+		.audio-section {
+			padding: 1rem;
+		}
+	}
+</style>
