@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import headshot from "../assets/headshot.png";
+import LinkButton from "../components/LinkButton.astro";
 ---
 
 <Layout>
@@ -17,11 +18,18 @@ import headshot from "../assets/headshot.png";
     </p>
 
     <div class="audio-section" id="tera-chera">
+      <div class="link-button-container">
+        <LinkButton sectionId="tera-chera" />
+      </div>
       <h2>Tera Chera (Dub? Edit?)</h2>
       <div class="audio-player">
-        <audio controls preload="metadata">
-          <source src="/TeraCheraV1.mp3" type="audio/mp3" />
-          Your browser does not support the audio element.
+        <audio 
+          controls
+          preload="metadata"
+        >
+          <source src="/TeraCheraV1.mp3" type="audio/mpeg" />
+          <source src="/TeraCheraV1.wav" type="audio/wav" />
+          Your browser does not support the audio element. <a href="/TeraCheraV1.mp3">Download the audio file</a>.
         </audio>
       </div>
       <div class="download-section">
@@ -36,6 +44,9 @@ import headshot from "../assets/headshot.png";
     </div>
 
     <div class="audio-section" id="dj-set">
+      <div class="link-button-container">
+        <LinkButton sectionId="dj-set" />
+      </div>
       <h2>30 min DJ set (UKG x Desi Bass x House Mix)</h2>
       <iframe
         width="325"
@@ -48,6 +59,9 @@ import headshot from "../assets/headshot.png";
     </div>
 
     <div class="audio-section" id="daft-punk-cover">
+      <div class="link-button-container">
+        <LinkButton sectionId="daft-punk-cover" />
+      </div>
       <h2>Something About Us - Daft Punk Cover</h2>
       <blockquote
         class="tiktok-embed"
@@ -74,6 +88,9 @@ import headshot from "../assets/headshot.png";
     </div>
 
     <div class="audio-section" id="lift-karadey">
+      <div class="link-button-container">
+        <LinkButton sectionId="lift-karadey" />
+      </div>
       <h2>Lift Karadey dub</h2>
       <iframe
         width="100%"
@@ -156,7 +173,13 @@ import headshot from "../assets/headshot.png";
     flex-direction: column;
     align-items: center;
     transition: all 0.3s ease;
-    cursor: pointer;
+    position: relative;
+  }
+
+  .link-button-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
   }
 
   .audio-section:target {
@@ -177,9 +200,8 @@ import headshot from "../assets/headshot.png";
   }
 
   audio {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 8px;
+    min-width: 300px;
+    height: 54px;
   }
 
   .download-section {
@@ -212,27 +234,3 @@ import headshot from "../assets/headshot.png";
   }
 </style>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const audioSections = document.querySelectorAll('.audio-section');
-    
-    audioSections.forEach(section => {
-      section.addEventListener('click', function(event) {
-        // Don't trigger if user clicked on interactive elements
-        const { target } = event;
-        if (!(target instanceof Element)) return;
-        if (target.closest('a, audio, iframe')) {
-          // Let the interactive element handle the event
-          event.stopPropagation();
-          return;
-        }
-        
-        const sectionId = section.id;
-        if (sectionId) {
-          // Update URL without causing page jump
-            history.pushState(null, '', `#${sectionId}`);
-        }
-      });
-    });
-  });
-</script>
