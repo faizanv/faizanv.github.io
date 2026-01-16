@@ -1,99 +1,190 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-	<main>
-		<h1>Show and Tell</h1>
-		<p>Welcome to my audio showcase! Here you can listen to and download audio files I'd like to share.</p>
-		
-		<div class="audio-section">
-			<h2>Tera Chera (Dub?)</h2>
-			<div class="audio-player">
-				<audio controls preload="metadata">
-					<source src="/TeraCheraV1.wav" type="audio/wav">
-					Your browser does not support the audio element.
-				</audio>
-			</div>
-			<div class="download-section">
-				<a href="/TeraCheraV1.wav" download="TeraCheraV1.wav" class="download-button">
-					Download .wav
-				</a>
-			</div>
+  <nav>
+    <a href="/" class="home-link">
+      <img src="/src/assets/headshot.png" alt="Home" class="headshot" />
+    </a>
+  </nav>
+  <main>
+    <h1>Show and Tell</h1>
+    <p>
+      Check out some of the things I've been working on and tell me what you
+      think!
+    </p>
+
+    <div class="audio-section" id="tera-chera">
+      <h2>Tera Chera (Dub? Edit?)</h2>
+      <div class="audio-player">
+        <audio controls preload="metadata">
+          <source src="/TeraCheraV1.wav" type="audio/wav" />
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div class="download-section">
+        <a
+          href="/TeraCheraV1.wav"
+          download="TeraCheraV1.wav"
+          class="download-button"
+        >
+          Download .wav
+        </a>
+      </div>
+    </div>
+
+    <div class="audio-section" id="dj-set">
+		<h2>30 min DJ set (UKG x Desi Bass x House Mix)</h2>
+		<iframe
+			width="325"
+			src="https://www.youtube.com/embed/erKnSYnhjyM?si=Kq4CARN-2cY5D4QB"
+			title="YouTube video player"
+			frameborder="0"
+			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+			referrerpolicy="strict-origin-when-cross-origin"
+			allowfullscreen />
+	</div>
+
+	<div class="audio-section" id="daft-punk-cover">
+		<h2>Something About Us - Daft Punk Cover</h2>
+		<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@faizan_v/video/7381708476092927275" data-video-id="7381708476092927275" style="width: 325px;" > <section> <a target="_blank" title="@faizan_v" href="https://www.tiktok.com/@faizan_v?refer=embed">@faizan_v</a> My cover of Something About Us by Daft Punk. This was my first attempt at recording music and putting it out there and this song has been one of favorites for longer than I can remember. Mixed by @awkwavision  <a target="_blank" title="♬ original sound  - Faizan" href="https://www.tiktok.com/music/original-sound-Faizan-7381713351040043819?refer=embed">♬ original sound  - Faizan</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
+	</div>
+
+    <div class="audio-section" id="lift-karadey">
+		<h2>Lift Karadey dub</h2>
+		<iframe
+		width="100%"
+		height="300"
+		scrolling="no"
+		frameborder="no"
+		allow="autoplay"
+		src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2055914528&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+		></iframe>
+		<div
+		style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"
+		>
+		<a
+			href="https://soundcloud.com/faizanv"
+			title="Faizan"
+			target="_blank"
+			style="color: #cccccc; text-decoration: none;">Faizan</a
+		> · <a
+			href="https://soundcloud.com/faizanv/lift-karadey-dub"
+			title="Lift Karadey dub"
+			target="_blank"
+			style="color: #cccccc; text-decoration: none;">Lift Karadey dub</a
+		>
 		</div>
-	</main>
+	</div>
+  </main>
 </Layout>
 
 <style>
-	main {
-		max-width: 800px;
-		margin: 0 auto;
-		padding: 2rem;
-	}
+  nav {
+    min-height: 70px;
+    padding: 16px;
+  }
 
-	h1 {
-		color: #333;
-		text-align: center;
-		margin-bottom: 1rem;
-	}
+  .home-link {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    transition: transform 0.2s ease;
+  }
 
-	p {
-		text-align: center;
-		margin-bottom: 2rem;
-		color: #666;
-	}
+  .home-link:hover {
+    transform: scale(1.05);
+  }
 
-	.audio-section {
-		background: #f8f9fa;
-		border-radius: 12px;
-		padding: 2rem;
-		margin-bottom: 2rem;
-		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-	}
+  .headshot {
+    height: 60px;
+    width: 60px;
+    object-fit: contain;
+    border: 1px solid #007acc;
+    border-radius: 50%;
+  }
 
-	h2 {
-		color: #333;
-		margin-bottom: 1rem;
-		text-align: center;
-	}
+  main {
+    width: 100%;
+	max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
 
-	.audio-player {
-		text-align: center;
-		margin-bottom: 1.5rem;
-	}
+  h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
 
-	audio {
-		width: 100%;
-		max-width: 500px;
-		border-radius: 8px;
-	}
+  p {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #666;
+  }
 
-	.download-section {
-		text-align: center;
-	}
+  .audio-section {
+    background: #becede;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+    transition: all 0.3s ease;
+  }
 
-	.download-button {
-		display: inline-block;
-		background: #007acc;
-		color: white;
-		padding: 0.75rem 1.5rem;
-		text-decoration: none;
-		border-radius: 6px;
-		font-weight: 500;
-		transition: background-color 0.2s ease;
-	}
+  .audio-section:target {
+    background: #a8c8e8;
+    box-shadow: 0 4px 16px rgba(0, 122, 204, 0.3);
+    border: 2px solid #007acc;
+  }
 
-	.download-button:hover {
-		background: #005a9d;
-	}
+  h2 {
+    color: #333;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
 
-	@media (max-width: 768px) {
-		main {
-			padding: 1rem;
-		}
-		
-		.audio-section {
-			padding: 1rem;
-		}
-	}
+  .audio-player {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  audio {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+  }
+
+  .download-section {
+    text-align: center;
+  }
+
+  .download-button {
+    display: inline-block;
+    background: #007acc;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+  }
+
+  .download-button:hover {
+    background: #005a9d;
+  }
+
+  @media (max-width: 768px) {
+    main {
+      padding: 1rem;
+    }
+
+    .audio-section {
+      padding: 1rem;
+    }
+  }
 </style>
