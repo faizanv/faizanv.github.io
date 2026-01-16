@@ -120,9 +120,13 @@ import LinkButton from "../components/LinkButton.astro";
 </Layout>
 
 <style>
+  * {
+    box-sizing: border-box;
+  }
+
   nav {
     min-height: 70px;
-    padding: 16px;
+    padding: 16px 16px 0 16px;
   }
 
   .home-link {
@@ -148,7 +152,7 @@ import LinkButton from "../components/LinkButton.astro";
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 2rem 1rem;
   }
 
   h1 {
@@ -223,6 +227,15 @@ import LinkButton from "../components/LinkButton.astro";
     background: #005a9d;
   }
 
+  iframe {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .tiktok-embed {
+    max-width: 100% !important;
+  }
+
   @media (max-width: 768px) {
     main {
       padding: 1rem;
@@ -230,6 +243,10 @@ import LinkButton from "../components/LinkButton.astro";
 
     .audio-section {
       padding: 1rem;
+    }
+    
+    audio {
+      min-width: 240px;
     }
   }
 </style>
