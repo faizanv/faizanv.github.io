@@ -1,11 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import headshot from "../assets/headshot.png";
 ---
 
 <Layout>
   <nav>
     <a href="/" class="home-link">
-      <img src="/src/assets/headshot.png" alt="Home" class="headshot" />
+      <img src={headshot.src} alt="Home" class="headshot" />
     </a>
   </nav>
   <main>
