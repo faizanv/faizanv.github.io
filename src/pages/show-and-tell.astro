@@ -13,7 +13,7 @@ import LinkButton from "../components/LinkButton.astro";
   <main>
     <h1>Show and Tell</h1>
     <p>
-      Check out some of the things I've been working on and tell me what you
+      Here are some of the things I've been working on and tell me what you
       think!
     </p>
 
@@ -21,24 +21,35 @@ import LinkButton from "../components/LinkButton.astro";
       <div class="link-button-container">
         <LinkButton sectionId="tera-chera" />
       </div>
-      <h2>Tera Chera (Dub? Edit?)</h2>
-      <div class="audio-player">
-        <audio 
-          controls
-          preload="metadata"
-        >
-          <source src="/TeraCheraV1.mp3" type="audio/mpeg" />
-          <source src="/TeraCheraV1.wav" type="audio/wav" />
-          Your browser does not support the audio element. <a href="/TeraCheraV1.mp3">Download the audio file</a>.
-        </audio>
+      <h2>Tera Chehra (crying in the club dub) </h2>
+      <iframe
+        width="100%"
+        height="300"
+        scrolling="no"
+        frameborder="no"
+        allow="autoplay"
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2265718682&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+      ></iframe><div
+        style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"
+      >
+        <a
+          href="https://soundcloud.com/faizanv"
+          title="faizan"
+          target="_blank"
+          style="color: #cccccc; text-decoration: none;">faizan</a
+        > · <a
+          href="https://soundcloud.com/faizanv/tera-chehra-dub"
+          title="Tera chehra (crying in the club dub)"
+          target="_blank"
+          style="color: #cccccc; text-decoration: none;"
+          >Tera chehra (crying in the club dub)</a>
       </div>
       <div class="download-section">
         <a
-          href="/TeraCheraV1.wav"
-          download="TeraCheraV1.wav"
+          href="https://hypeddit.com/6q3h69"
           class="download-button"
         >
-          Download .wav
+          Download here
         </a>
       </div>
     </div>
@@ -125,7 +136,7 @@ import LinkButton from "../components/LinkButton.astro";
   }
 
   nav {
-    min-height: 70px;
+    min-height: 64px;
     padding: 16px 16px 0 16px;
   }
 
@@ -244,10 +255,9 @@ import LinkButton from "../components/LinkButton.astro";
     .audio-section {
       padding: 1rem;
     }
-    
+
     audio {
       min-width: 240px;
     }
   }
 </style>
-
