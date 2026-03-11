@@ -133,7 +133,29 @@ const venmoUrl = "https://account.venmo.com/u/faizanv";
     position: relative;
     width: min(420px, 100%);
     margin-inline: auto;
+    transform: translatey(0px);
+	animation: float 7s ease-in-out infinite;
   }
+
+  @keyframes float {
+	0% {
+		/* box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6); */
+		transform: translatey(0px);
+        /* transform: rotate(0deg); */
+	}
+	25% {
+		/* box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2); */
+		transform: translatey(-5px);
+        /* transform: rotate(-3deg); */
+	}
+    75% {
+        /* transform: rotate(3deg); */
+        transform: translatey(-5px);
+    }
+    100% {
+        /* transform: rotate(0deg); */
+    }
+}
 
   .skeleton {
     position: absolute;
@@ -196,12 +218,32 @@ const venmoUrl = "https://account.venmo.com/u/faizanv";
     color: #db2777;
   }
 
+  @keyframes hithere {
+    30% {
+      transform: scale(1.2);
+    }
+    40%,
+    60% {
+      transform: rotate(-20deg) scale(1.2);
+    }
+    50% {
+      transform: rotate(20deg) scale(1.2);
+    }
+    70% {
+      transform: rotate(0deg) scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
   h1 {
     margin: 0;
     font-size: clamp(2.5rem, 7vw, 5rem);
     line-height: 0.95;
     letter-spacing: -0.04em;
     font-family: Georgia, "Times New Roman", Times, serif;
+    animation: hithere 1.5s ease 1;
   }
 
   h2 {
