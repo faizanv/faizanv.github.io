@@ -9,11 +9,15 @@ const venmoUrl = "https://account.venmo.com/u/faizanv";
 <Layout>
   <main class="page-shell">
     <section class="poster-section" aria-label="Event poster">
-      <img
-        src="/abunDANCE-vertical.png"
-        alt="abunDANCE 2026 poster"
-        class="event-image"
-      />
+      <div class="image-wrapper">
+        <div class="skeleton" id="poster-skeleton" aria-hidden="true"></div>
+        <img
+          src="/abunDANCE-vertical.png"
+          alt="abunDANCE 2026 poster"
+          class="event-image"
+          id="poster-image"
+        />
+      </div>
     </section>
 
     <section class="content-card">
@@ -107,7 +111,9 @@ const venmoUrl = "https://account.venmo.com/u/faizanv";
       radial-gradient(circle at 50% 30%, #ffb443 0%, #e07a0d 40%, #d31f32 100%),
       linear-gradient(180deg, #e07a0d 0%, #d31f32 100%);
     background-repeat: repeat-y;
-    background-size: 100% 100%, 100% 100%;
+    background-size:
+      100% 100%,
+      100% 100%;
     color: #1f2937;
   }
 
@@ -118,13 +124,53 @@ const venmoUrl = "https://account.venmo.com/u/faizanv";
     align-items: center;
   }
 
+  .image-wrapper {
+    position: relative;
+    width: min(420px, 100%);
+    margin-inline: auto;
+  }
+
+  .skeleton {
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.12) 25%,
+      rgba(255, 255, 255, 0.28) 50%,
+      rgba(255, 255, 255, 0.12) 75%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    transition: opacity 0.3s ease;
+  }
+
+  .skeleton.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+
   .event-image {
     display: block;
-    width: min(420px, 100%);
+    width: 100%;
     height: auto;
-    margin-inline: auto;
     filter: drop-shadow(0 24px 48px rgba(31, 41, 55, 0.26));
     box-shadow: 0 14px 30px rgba(31, 41, 55, 0.22);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .event-image.loaded {
+    opacity: 1;
   }
 
   .content-card {
@@ -150,6 +196,12 @@ const venmoUrl = "https://account.venmo.com/u/faizanv";
     font-size: clamp(2.5rem, 7vw, 5rem);
     line-height: 0.95;
     letter-spacing: -0.04em;
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
+
+  h2 {
+    font-size: 3rem;
+    letter-spacing: -0.02em;
     font-family: Georgia, "Times New Roman", Times, serif;
   }
 
@@ -223,3 +275,20 @@ const venmoUrl = "https://account.venmo.com/u/faizanv";
     }
   }
 </style>
+
+<script>
+  // Image loading logic to show skeleton until the poster image is fully loaded
+  const img = document.getElementById("poster-image") as HTMLImageElement;
+  const skeleton = document.getElementById("poster-skeleton");
+
+  function onLoaded() {
+    img?.classList.add("loaded");
+    skeleton?.classList.add("hidden");
+  }
+
+  if (img?.complete) {
+    onLoaded();
+  } else {
+    img?.addEventListener("load", onLoaded);
+  }
+</script>
