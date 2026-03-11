@@ -1,8 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
-const residentAdvisorUrl =
-  "https://ra.co/events/2391292";
+const residentAdvisorUrl = "https://ra.co/events/2391292";
 const venmoUrl = "https://account.venmo.com/u/faizanv";
 ---
 
@@ -13,6 +12,20 @@ const venmoUrl = "https://account.venmo.com/u/faizanv";
   ogImage="/abunDANCE-cropped.jpg"
 >
   <main class="page-shell">
+    <nav class="top-nav" aria-label="Quick links">
+      <a
+        href={residentAdvisorUrl}
+        class="nav-link nav-rsvp"
+        target="_blank"
+        rel="noopener noreferrer">RSVP</a
+      >
+      <a
+        href={venmoUrl}
+        class="nav-link nav-donate"
+        target="_blank"
+        rel="noopener noreferrer">Donate</a
+      >
+    </nav>
     <section class="poster-section" aria-label="Event poster">
       <div class="image-wrapper">
         <div class="skeleton" id="poster-skeleton" aria-hidden="true"></div>
@@ -28,6 +41,10 @@ const venmoUrl = "https://account.venmo.com/u/faizanv";
     <section class="content-card">
       <p class="eyebrow">global sounds. heavy bass</p>
       <h1>abunDANCE</h1>
+      <p class="eyebrow">
+        april 4th, 2026 - 10PM <br />
+        167 Graham Ave, Brooklyn, NY
+      </p>
       <p class="description">
         Come join us for the first iteration of abunDANCE, an exploration of
         global sounds with a focus on underground and ground shaking music
@@ -63,7 +80,7 @@ const venmoUrl = "https://account.venmo.com/u/faizanv";
           href={residentAdvisorUrl}
           class="primary-link"
           target="_blank"
-          rel="noopener noreferrer">RSVP here (RA guide)</a
+          rel="noopener noreferrer">RSVP here (Resident Advisor)</a
         >
         <a
           href={venmoUrl}
@@ -101,6 +118,32 @@ const venmoUrl = "https://account.venmo.com/u/faizanv";
     background-color: #e07a0d;
   }
 
+  .top-nav {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    @media (max-width: 720px) {
+      justify-content: center;
+    }
+  }
+
+  .nav-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 999px;
+    color: white;
+    transition: transform 0.2s ease;
+  }
+
+  .nav-link:hover {
+    transform: translateY(-1px);
+  }
+
   .page-shell {
     min-height: 100vh;
     position: relative;
@@ -134,28 +177,28 @@ const venmoUrl = "https://account.venmo.com/u/faizanv";
     width: min(420px, 100%);
     margin-inline: auto;
     transform: translatey(0px);
-	animation: float 7s ease-in-out infinite;
+    animation: float 7s ease-in-out infinite;
   }
 
   @keyframes float {
-	0% {
-		/* box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6); */
-		transform: translatey(0px);
-        /* transform: rotate(0deg); */
-	}
-	25% {
-		/* box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2); */
-		transform: translatey(-5px);
-        /* transform: rotate(-3deg); */
-	}
+    0% {
+      /* box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6); */
+      transform: translatey(0px);
+      /* transform: rotate(0deg); */
+    }
+    25% {
+      /* box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2); */
+      transform: translatey(-5px);
+      /* transform: rotate(-3deg); */
+    }
     75% {
-        /* transform: rotate(3deg); */
-        transform: translatey(-5px);
+      /* transform: rotate(3deg); */
+      transform: translatey(-5px);
     }
     100% {
-        /* transform: rotate(0deg); */
+      /* transform: rotate(0deg); */
     }
-}
+  }
 
   .skeleton {
     position: absolute;
@@ -257,7 +300,7 @@ const venmoUrl = "https://account.venmo.com/u/faizanv";
     margin: 18px auto 0;
     font-size: 1.08rem;
     line-height: 1.7;
-    color: #4b5563;
+    color: #3a424d;
     text-align: center;
   }
 
