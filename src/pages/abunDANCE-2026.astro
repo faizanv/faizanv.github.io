@@ -1,0 +1,225 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const residentAdvisorUrl =
+  "https://partiful.com/e/KdNGsirNXOK8vaVq7xRL?c=9QVyA0Yj";
+const venmoUrl = "https://account.venmo.com/u/faizanv";
+---
+
+<Layout>
+  <main class="page-shell">
+    <section class="poster-section" aria-label="Event poster">
+      <img
+        src="/abunDANCE-vertical.png"
+        alt="abunDANCE 2026 poster"
+        class="event-image"
+      />
+    </section>
+
+    <section class="content-card">
+      <p class="eyebrow">global sounds. heavy bass</p>
+      <h1>abunDANCE</h1>
+      <p class="description">
+        Come join us for the first iteration of abunDANCE, an exploration of
+        global sounds with a focus on underground and ground shaking music
+        co-hosted with <a
+          href="https://www.instagram.com/daytimers_nyc/"
+          target="_blank"
+          rel="noopener noreferrer">Daytimers NYC</a
+        >.
+      </p>
+      <p class="description">
+        Expect a heavy focus on Global South bass-centered music—where tabla
+        rhythms meet sub-heavy synths, and traditional melodies are reimagined
+        through the lens of modern club culture. From UK Bhangra-inflected
+        rollers to global club sounds and experimental bass, the mission is
+        simple: stank face that reminds you of a simpler time/place.
+      </p>
+      <p class="lead">
+        The power of the dancefloor is a site of mutual support and community.
+        This year, we will be collecting donations to support DRUM (Desis Rising
+        Up and Moving) NYC in their mission to help "low-income, South Asian and
+        Indo-Caribbean immigrants to lead social and policy change that impacts
+        their own lives".
+      </p>
+      <p class="lead">
+        (Can't make it to the event? Donate directly to <a
+          href="https://www.drumnyc.org/"
+          target="_blank"
+          rel="noopener noreferrer">DRUM NYC</a
+        > or Venmo below)
+      </p>
+      <div class="cta-row">
+        <a
+          href={residentAdvisorUrl}
+          class="primary-link"
+          target="_blank"
+          rel="noopener noreferrer">RSVP here</a
+        >
+        <a
+          href={venmoUrl}
+          class="venmo-link"
+          target="_blank"
+          rel="noopener noreferrer">Donate on Venmo</a
+        >
+      </div>
+    </section>
+
+    <section class="content-card">
+      <h2>What to expect</h2>
+      <iframe
+        width="100%"
+        height="166"
+        scrolling="no"
+        frameborder="no"
+        allow="autoplay"
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2158776687&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+      ></iframe>
+
+      <iframe
+        width="100%"
+        height="120"
+        src="https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Ffaizanv%2Ffaizan-puts-you-on-vol-1-ukg-x-desi-bass-x-house-mix%2F"
+        frameborder="0"
+        allow="encrypted-media; fullscreen; autoplay; idle-detection; speaker-selection; web-share;"
+      ></iframe>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  :global(body) {
+    background-color: #e07a0d;
+  }
+
+  .page-shell {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    padding: 32px 24px 56px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 28px;
+    background-color: #d31f32;
+    background-image:
+      radial-gradient(circle at 50% 30%, #ffb443 0%, #e07a0d 40%, #d31f32 100%),
+      linear-gradient(180deg, #e07a0d 0%, #d31f32 100%);
+    background-repeat: repeat-y;
+    background-size: 100% 100%, 100% 100%;
+    color: #1f2937;
+  }
+
+  .poster-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .event-image {
+    display: block;
+    width: min(420px, 100%);
+    height: auto;
+    margin-inline: auto;
+    filter: drop-shadow(0 24px 48px rgba(31, 41, 55, 0.26));
+    box-shadow: 0 14px 30px rgba(31, 41, 55, 0.22);
+  }
+
+  .content-card {
+    backdrop-filter: blur(14px);
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 20px 60px rgba(31, 41, 55, 0.12);
+    width: min(760px, 100%);
+    border-radius: 28px;
+    padding: 40px 28px;
+    text-align: center;
+  }
+
+  .eyebrow {
+    margin: 0 0 12px;
+    letter-spacing: 0.24em;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #db2777;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(2.5rem, 7vw, 5rem);
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
+
+  .lead {
+    max-width: 44rem;
+    margin: 18px auto 0;
+    font-size: 1.08rem;
+    line-height: 1.7;
+    color: #4b5563;
+    text-align: center;
+  }
+
+  .description {
+    max-width: 38rem;
+    margin: 14px auto 0;
+    font-size: 0.98rem;
+    line-height: 1.7;
+    color: #1f2937;
+    text-align: justify;
+  }
+
+  .cta-row {
+    margin-top: 28px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  iframe {
+    margin: 16px 0;
+  }
+
+  .primary-link,
+  .venmo-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    padding: 12px 18px;
+    text-decoration: none;
+    font-weight: 700;
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease,
+      background 0.2s ease,
+      color 0.2s ease;
+  }
+
+  .primary-link {
+    background-color: rgb(255, 72, 72);
+    color: white;
+    box-shadow: 0 10px 24px rgba(139, 92, 246, 0.28);
+  }
+
+  .venmo-link {
+    border: 1px solid rgba(139, 92, 246, 0.22);
+    color: white;
+    background-color: #0074de;
+  }
+
+  .primary-link:hover,
+  .venmo-link:hover {
+    transform: translateY(-1px);
+  }
+
+  @media (max-width: 720px) {
+    .content-card {
+      padding: 32px 22px;
+      border-radius: 24px;
+    }
+  }
+</style>
