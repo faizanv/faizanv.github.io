@@ -3,6 +3,9 @@ import Layout from "../layouts/Layout.astro";
 
 const residentAdvisorUrl = "https://ra.co/events/2391292";
 const venmoUrl = "https://account.venmo.com/u/faizanv";
+const zelleUrl = "https://enroll.zellepay.com/qr-codes?data=eyJuYW1lIjoiRkFJWkFOIiwidG9rZW4iOiI5NTQ2MDk3NTI3IiwiYWN0aW9uIjoicGF5bWVudCJ9";
+const cashappUrl = "https://cash.app/$faizanv";
+const organizationUrl = "https://drum.ourpowerbase.net/civicrm/contribute/transact?reset=1&id=13";
 ---
 
 <Layout
@@ -20,10 +23,8 @@ const venmoUrl = "https://account.venmo.com/u/faizanv";
         rel="noopener noreferrer">RSVP</a
       >
       <a
-        href={venmoUrl}
-        class="nav-link nav-donate"
-        target="_blank"
-        rel="noopener noreferrer">Donate</a
+        href="#donate-section"
+        class="nav-link nav-donate">Donate</a
       >
     </nav>
     <section class="poster-section" aria-label="Event poster">
@@ -80,13 +81,11 @@ const venmoUrl = "https://account.venmo.com/u/faizanv";
           href={residentAdvisorUrl}
           class="primary-link"
           target="_blank"
-          rel="noopener noreferrer">RSVP here (Resident Advisor)</a
+          rel="noopener noreferrer">RSVP</a
         >
         <a
-          href={venmoUrl}
-          class="venmo-link"
-          target="_blank"
-          rel="noopener noreferrer">Donate on Venmo</a
+          href="#donate-section"
+          class="venmo-link">Donate</a
         >
       </div>
     </section>
@@ -110,10 +109,50 @@ const venmoUrl = "https://account.venmo.com/u/faizanv";
         allow="encrypted-media; fullscreen; autoplay; idle-detection; speaker-selection; web-share;"
       ></iframe>
     </section>
+
+    <section class="content-card" id="donate-section">
+      <h2>donate</h2>
+      <p class="lead">
+        proceeds will support DRUM NYC’s mission to build the power of South
+        Asian & Indo-Caribbean low-wage immigrant workers, youth, and families
+        in New York City. help them support economic, educational, and civil
+        rights for our community
+      </p>
+      <div class="donate-buttons" aria-label="Donation links">
+        <a
+          href={organizationUrl}
+          class="donate-link"
+          target="_blank"
+          rel="noopener noreferrer">DRUM NYC Website</a
+        >
+        <a
+          href={venmoUrl}
+          class="donate-link"
+          target="_blank"
+          rel="noopener noreferrer">Venmo</a
+        >
+        <a
+          href={zelleUrl}
+          class="donate-link"
+          target="_blank"
+          rel="noopener noreferrer">Zelle</a
+        >
+        <a
+          href={cashappUrl}
+          class="donate-link"
+          target="_blank"
+          rel="noopener noreferrer">Cash App</a
+        >
+      </div>
+    </section>
   </main>
 </Layout>
 
 <style>
+  :global(html) {
+    scroll-behavior: smooth;
+  }
+
   :global(body) {
     background-color: #e07a0d;
   }
@@ -175,6 +214,7 @@ const venmoUrl = "https://account.venmo.com/u/faizanv";
   .image-wrapper {
     position: relative;
     width: min(420px, 100%);
+    aspect-ratio: 3 / 4;
     margin-inline: auto;
     transform: translatey(0px);
     animation: float 7s ease-in-out infinite;
@@ -356,6 +396,35 @@ const venmoUrl = "https://account.venmo.com/u/faizanv";
   .primary-link:hover,
   .venmo-link:hover {
     transform: translateY(-1px);
+  }
+
+  .donate-buttons {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .donate-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-weight: 700;
+    background: rgba(255, 255, 255, 0.5);
+    color: #1f2937;
+    border: 1px solid rgba(31, 41, 55, 0.18);
+    transition:
+      transform 0.2s ease,
+      background-color 0.2s ease;
+  }
+
+  .donate-link:hover {
+    transform: translateY(-1px);
+    background: rgba(255, 255, 255, 0.8);
   }
 
   @media (max-width: 720px) {
