@@ -29,7 +29,9 @@ import Links from "./Links.astro";
         >
       </li>
       <li>
-        <span class="bouncing-icon">🎵</span> Also makes <a href="/show-and-tell">music</a> (<a
+        <span class="bouncing-icon">🎵</span> Also makes <a
+          href="/show-and-tell">music</a
+        > (<a
           href="https://soundcloud.com/faizanv"
           target="_blank"
           rel="noopener">soundcloud</a
@@ -39,6 +41,11 @@ import Links from "./Links.astro";
           target="_blank"
           rel="noopener">youtube</a
         >)
+      </li>
+      <li>
+        <span class="bouncing-icon">🪩</span> I'm throwing a party <a
+          href="/abunDANCE-2026">abunDANCE 2026</a
+        >
       </li>
       <li id="mobile-surprise">(open on mobile for a surprise)</li>
     </ul>
@@ -97,8 +104,9 @@ import Links from "./Links.astro";
   }
 
   pre {
-    font-family: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo,
-      Consolas, "DejaVu Sans Mono", monospace;
+    font-family:
+      ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas,
+      "DejaVu Sans Mono", monospace;
     font-weight: normal;
     background: linear-gradient(14deg, #d83333 0%, #f041ff 100%);
     -webkit-background-clip: text;
@@ -160,6 +168,9 @@ import Links from "./Links.astro";
   .description-list li:nth-child(4) .bouncing-icon {
     animation-delay: 4s;
   }
+  .description-list li:nth-child(5) .bouncing-icon {
+    animation-delay: 5s;
+  }
 
   #enable-rotation {
     display: none;
@@ -203,7 +214,7 @@ import Links from "./Links.astro";
       if (headshot) {
         const rotateZ = e.gamma ?? 0; // left to right
         headshot.style.transform = `rotate(${360 - rotateZ}deg)`;
-        
+
         Array.from(bouncingIcons).forEach((icon) => {
           (icon as HTMLElement).style.transform = `rotate(${rotateZ}deg)`;
         });
@@ -225,7 +236,7 @@ import Links from "./Links.astro";
             window.addEventListener(
               "deviceorientation",
               orientationListener,
-              false
+              false,
             );
           } else {
             alert("Permission not granted to access device orientation");
