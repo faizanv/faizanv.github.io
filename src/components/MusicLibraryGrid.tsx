@@ -17,8 +17,8 @@ type MusicLibraryGridProps = {
 const columns = [
   { id: "Title", header: "Title", width: 200, sort: true },
   { id: "Artist", header: "Artist", width: 150, sort: true },
-  { id: "InitialKey", header: "Key", width: 50, sort: true },
-  { id: "BeatsPerMinute", header: "BPM", width: 50, sort: true },
+  { id: "InitialKey", header: "Key", width: 75, sort: true },
+  { id: "BeatsPerMinute", header: "BPM", width: 100, sort: true },
 ];
 
 export default function MusicLibraryGrid({ data }: MusicLibraryGridProps) {
