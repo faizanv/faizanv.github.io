@@ -6,9 +6,12 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "update-music": "bash scripts/update-music-library.sh"
   },
   "dependencies": {
+    "@astrojs/react": "^5.0.2",
+    "@svar-ui/react-grid": "^2.6.1",
     "astro": "^5.16.1",
     "canvas-confetti": "^1.9.3"
   }

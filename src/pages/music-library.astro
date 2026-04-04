@@ -1,0 +1,47 @@
+---
+import Layout from '../layouts/Layout.astro';
+import MusicLibraryGrid from '../components/MusicLibraryGrid';
+import musicLibraryRaw from '../../music-library.json';
+
+type MusicTrack = {
+	Title: string;
+	Artist: string;
+	InitialKey: string;
+	BeatsPerMinute: number;
+};
+
+const tracks = (musicLibraryRaw as MusicTrack[]).map((track, index) => ({
+	id: index + 1,
+	...track,
+}));
+---
+
+<Layout title="Music Library" ogTitle="Music Library | Faizan Virani">
+	<main class="music-library-page">
+		<h1>Music Library</h1>
+		<MusicLibraryGrid client:load data={tracks} />
+	</main>
+</Layout>
+
+<style>
+	.music-library-page {
+		padding: 2rem;
+	}
+
+	h1 {
+		margin: 0;
+		font-size: 2rem;
+	}
+
+	.subtitle {
+		margin-top: 0.5rem;
+		margin-bottom: 1.5rem;
+		color: #4b5563;
+	}
+
+	@media (max-width: 768px) {
+		.music-library-page {
+			padding: 1rem;
+		}
+	}
+</style>
