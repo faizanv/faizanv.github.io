@@ -444,12 +444,6 @@
   "BeatsPerMinute": 126
 },
 {
-  "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Kazinama & Nusrat Fateh Ali Khan - Tauba Tauba.flac",
-  "Title": "Tauba Tauba",
-  "Artist": "Kazinama & Nusrat Fateh Ali Khan",
-  "Initialkey": "8m"
-},
-{
   "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Dr Cryptic - Missing Her.mp3",
   "Title": "Missing Her",
   "Artist": "Dr Cryptic",
@@ -701,6 +695,13 @@
   "Artist": "Disclosure",
   "InitialKey": "12m",
   "BeatsPerMinute": 124
+},
+{
+  "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/MPH, Ev & Chris Lorenzo - Run.mp3",
+  "Title": "Run",
+  "Artist": "MPH, Ev & Chris Lorenzo",
+  "InitialKey": "3d",
+  "BeatsPerMinute": 135
 },
 {
   "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Luude, Elliphant - Pachamama.mp3",
@@ -1210,6 +1211,13 @@
   "BeatsPerMinute": 134
 },
 {
+  "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Dann - Keep_It.mp3",
+  "Title": "Keep_It",
+  "Artist": "Dann",
+  "InitialKey": "5m",
+  "BeatsPerMinute": 136
+},
+{
   "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/MEMBA - BACK ONLINE.mp3",
   "Title": "BACK ONLINE",
   "Artist": "MEMBA",
@@ -1536,6 +1544,13 @@
   "BeatsPerMinute": 140
 },
 {
+  "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Villager - VILLAGER RUN THAT AGAIN.mp3",
+  "Title": "VILLAGER RUN THAT AGAIN",
+  "Artist": "Villager",
+  "InitialKey": "12m",
+  "BeatsPerMinute": 140
+},
+{
   "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Omar ؏ - Dola Re Dola.mp3",
   "Title": "Dola Re Dola",
   "Artist": "Omar ؏",
@@ -1548,6 +1563,13 @@
   "Artist": "Doctor Jeep",
   "InitialKey": "12d",
   "BeatsPerMinute": 140
+},
+{
+  "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Aloka - K1.mp3",
+  "Title": "K1",
+  "Artist": "Aloka",
+  "InitialKey": "4d",
+  "BeatsPerMinute": 136
 },
 {
   "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Sammy Virji - Bogeyman.mp3",
@@ -1625,6 +1647,13 @@
   "Artist": "Panjabi Hit Squad",
   "InitialKey": "9m",
   "BeatsPerMinute": 130
+},
+{
+  "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Juss Nandhra & Jungli - Jugni.mp3",
+  "Title": "Jugni",
+  "Artist": "Juss Nandhra & Jungli",
+  "InitialKey": "5m",
+  "BeatsPerMinute": 116
 },
 {
   "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Kendrick Lamar - Not Like Us (DessignerToys Flip).mp3",
@@ -1808,6 +1837,13 @@
   "Artist": "Becking",
   "InitialKey": "2m",
   "BeatsPerMinute": 140
+},
+{
+  "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Fcukers - Play Me.mp3",
+  "Title": "Play Me [Explicit]",
+  "Artist": "Fcukers",
+  "InitialKey": "4m",
+  "BeatsPerMinute": 170
 },
 {
   "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Lapgan & Baalti - Jab Se.mp3",
@@ -2115,6 +2151,13 @@
   "BeatsPerMinute": 139
 },
 {
+  "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Surusinghe - Bop.mp3",
+  "Title": "Bop",
+  "Artist": "Surusinghe",
+  "InitialKey": "1m",
+  "BeatsPerMinute": 133
+},
+{
   "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Alexandra Stan - Mr. Saxobeat (OOTORO & Decemberkid _UGD_ Edit).mp3",
   "Title": "Mr. Saxobeat (OOTORO & Decemberkid _UGD_ Edit) - Alexandra Stan",
   "Artist": "",
@@ -2395,6 +2438,13 @@
   "BeatsPerMinute": 145
 },
 {
+  "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Champion, Denham Audio & Bklava - Set Me Free.mp3",
+  "Title": "Set Me Free",
+  "Artist": "Champion, Denham Audio & Bklava",
+  "InitialKey": "3d",
+  "BeatsPerMinute": 138
+},
+{
   "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Kendrick Lamar, Travis Scott - Big Shot.mp3",
   "Title": "Big Shot",
   "Artist": "Kendrick Lamar, Travis Scott",
@@ -2470,6 +2520,13 @@
   "Artist": "Skrillex",
   "InitialKey": "8m",
   "BeatsPerMinute": 145
+},
+{
+  "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Neumonic - Fidget.mp3",
+  "Title": "Fidget",
+  "Artist": "Neumonic",
+  "InitialKey": "12d",
+  "BeatsPerMinute": 135
 },
 {
   "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/NADĪ - Tabla Juice.mp3",
@@ -2663,6 +2720,13 @@
   "BeatsPerMinute": 120
 },
 {
+  "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Dann - Weight.mp3",
+  "Title": "Weight",
+  "Artist": "Dann",
+  "InitialKey": "10m",
+  "BeatsPerMinute": 136
+},
+{
   "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Barry Can't Swim - Sunsleeper.mp3",
   "Title": "Sunsleeper",
   "Artist": "Barry Can't Swim",
@@ -2718,6 +2782,14 @@
   "Artist": "Yo Speed",
   "InitialKey": "10m",
   "BeatsPerMinute": 137
+},
+{
+  "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Kazinama & Nusrat Fateh Ali Khan - Tauba Tauba.mp3",
+  "Title": "Tauba Tauba",
+  "Artist": "Kazinama & Nusrat Fateh Ali Khan",
+  "Initialkey": "8m",
+  "InitialKey": "8m",
+  "BeatsPerMinute": 130
 },
 {
   "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Fred again.. - places to be.mp3",
@@ -4414,6 +4486,13 @@
   "Artist": "Omar ؏",
   "InitialKey": "3m",
   "BeatsPerMinute": 138
+},
+{
+  "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Akki - give me what i want.mp3",
+  "Title": "give me what i want",
+  "Artist": "Akki ",
+  "InitialKey": "12m",
+  "BeatsPerMinute": 128
 },
 {
   "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Jersey - Talk Tonight.mp3",
