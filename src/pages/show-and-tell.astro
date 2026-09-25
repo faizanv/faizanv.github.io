@@ -13,15 +13,16 @@ import LinkButton from "../components/LinkButton.astro";
   <main>
     <h1>Show and Tell</h1>
     <p>
-      Here are some of the things I've been working on and tell me what you
-      think!
+      Here are a few things I've been working on. Let me know what you think!
     </p>
 
     <div class="audio-section" id="kaho-na-kaho">
-      <div class="link-button-container">
-        <LinkButton sectionId="kaho-na-kaho" />
+      <div class="card-header">
+        <h2>Kaho Na Kaho</h2>
+        <div class="card-action">
+          <LinkButton sectionId="kaho-na-kaho" />
+        </div>
       </div>
-      <h2>Kaho Na Kaho</h2>
       <div class="kaho-embed">
         <iframe
           src="https://untitled.stream/embed/IdcRg8sgIdw7"
@@ -35,10 +36,12 @@ import LinkButton from "../components/LinkButton.astro";
     </div>
 
     <div class="audio-section" id="tera-chera">
-      <div class="link-button-container">
-        <LinkButton sectionId="tera-chera" />
+      <div class="card-header">
+        <h2>Tera Chehra (crying in the club dub)</h2>
+        <div class="card-action">
+          <LinkButton sectionId="tera-chera" />
+        </div>
       </div>
-      <h2>Tera Chehra (crying in the club dub)</h2>
       <iframe
         width="100%"
         height="300"
@@ -70,10 +73,12 @@ import LinkButton from "../components/LinkButton.astro";
     </div>
 
     <div class="audio-section" id="dj-set">
-      <div class="link-button-container">
-        <LinkButton sectionId="dj-set" />
+      <div class="card-header">
+        <h2>30 min DJ set (UKG x Desi Bass x House Mix)</h2>
+        <div class="card-action">
+          <LinkButton sectionId="dj-set" />
+        </div>
       </div>
-      <h2>30 min DJ set (UKG x Desi Bass x House Mix)</h2>
       <iframe
         width="325"
         src="https://www.youtube.com/embed/erKnSYnhjyM?si=Kq4CARN-2cY5D4QB"
@@ -85,10 +90,12 @@ import LinkButton from "../components/LinkButton.astro";
     </div>
 
     <div class="audio-section" id="daft-punk-cover">
-      <div class="link-button-container">
-        <LinkButton sectionId="daft-punk-cover" />
+      <div class="card-header">
+        <h2>Something About Us - Daft Punk Cover</h2>
+        <div class="card-action">
+          <LinkButton sectionId="daft-punk-cover" />
+        </div>
       </div>
-      <h2>Something About Us - Daft Punk Cover</h2>
       <blockquote
         class="tiktok-embed"
         cite="https://www.tiktok.com/@faizan_v/video/7381708476092927275"
@@ -114,10 +121,12 @@ import LinkButton from "../components/LinkButton.astro";
     </div>
 
     <div class="audio-section" id="lift-karadey">
-      <div class="link-button-container">
-        <LinkButton sectionId="lift-karadey" />
+      <div class="card-header">
+        <h2>Lift Karadey dub</h2>
+        <div class="card-action">
+          <LinkButton sectionId="lift-karadey" />
+        </div>
       </div>
-      <h2>Lift Karadey dub</h2>
       <iframe
         width="100%"
         height="300"
@@ -194,11 +203,17 @@ import LinkButton from "../components/LinkButton.astro";
   }
 
   .audio-section {
-    background: #becede;
-    border-radius: 12px;
+    background: rgba(244, 246, 249, 0.9);
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    border-radius: 16px;
     padding: 2rem;
     margin-bottom: 2rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow:
+      0 8px 18px rgba(15, 23, 42, 0.08),
+      0 18px 38px rgba(15, 23, 42, 0.08),
+      0 1px 0 rgba(255, 255, 255, 0.8) inset;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -210,7 +225,8 @@ import LinkButton from "../components/LinkButton.astro";
     width: 100%;
     border-radius: 24px;
     overflow: hidden;
-    background: rgba(0, 0, 0, 0.04);
+    background: rgba(15, 23, 42, 0.03);
+    border: 1px solid rgba(148, 163, 184, 0.2);
   }
 
   .kaho-embed iframe {
@@ -221,22 +237,33 @@ import LinkButton from "../components/LinkButton.astro";
     border-radius: 24px;
   }
 
-  .link-button-container {
+  .card-header {
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .card-action {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .audio-section:target {
-    background: #a8c8e8;
-    box-shadow: 0 4px 16px rgba(0, 122, 204, 0.3);
-    border: 2px solid #007acc;
+    background: rgba(244, 246, 249, 1);
+    box-shadow: 0 16px 32px rgba(0, 122, 204, 0.12);
+    border: 2px solid rgba(0, 122, 204, 0.5);
   }
 
   h2 {
     color: #333;
-    margin-bottom: 1rem;
-    text-align: center;
+    margin: 0;
+    text-align: left;
+    flex: 1;
   }
 
   .audio-player {
@@ -251,6 +278,7 @@ import LinkButton from "../components/LinkButton.astro";
 
   .download-section {
     text-align: center;
+    margin-top: 16px;
   }
 
   .download-button {
