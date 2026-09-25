@@ -17,11 +17,28 @@ import LinkButton from "../components/LinkButton.astro";
       think!
     </p>
 
+    <div class="audio-section" id="kaho-na-kaho">
+      <div class="link-button-container">
+        <LinkButton sectionId="kaho-na-kaho" />
+      </div>
+      <h2>Kaho Na Kaho</h2>
+      <div class="kaho-embed">
+        <iframe
+          src="https://untitled.stream/embed/IdcRg8sgIdw7"
+          width="100%"
+          height="420"
+          allow="picture-in-picture"
+          frameborder="0"
+          loading="lazy"
+        ></iframe>
+      </div>
+    </div>
+
     <div class="audio-section" id="tera-chera">
       <div class="link-button-container">
         <LinkButton sectionId="tera-chera" />
       </div>
-      <h2>Tera Chehra (crying in the club dub) </h2>
+      <h2>Tera Chehra (crying in the club dub)</h2>
       <iframe
         width="100%"
         height="300"
@@ -42,13 +59,11 @@ import LinkButton from "../components/LinkButton.astro";
           title="Tera chehra (crying in the club dub)"
           target="_blank"
           style="color: #cccccc; text-decoration: none;"
-          >Tera chehra (crying in the club dub)</a>
+          >Tera chehra (crying in the club dub)</a
+        >
       </div>
       <div class="download-section">
-        <a
-          href="https://hypeddit.com/6q3h69"
-          class="download-button"
-        >
+        <a href="https://hypeddit.com/6q3h69" class="download-button">
           Download here
         </a>
       </div>
@@ -189,6 +204,21 @@ import LinkButton from "../components/LinkButton.astro";
     align-items: center;
     transition: all 0.3s ease;
     position: relative;
+  }
+
+  .kaho-embed {
+    width: 100%;
+    border-radius: 24px;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.04);
+  }
+
+  .kaho-embed iframe {
+    display: block;
+    width: 100%;
+    height: 200px;
+    border: 0;
+    border-radius: 24px;
   }
 
   .link-button-container {
