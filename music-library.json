@@ -69,6 +69,13 @@
   "BeatsPerMinute": 135
 },
 {
+  "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Djazz, Unmesh Banerjee - The Tiger Swami.mp3",
+  "Title": "The Tiger Swami",
+  "Artist": "Djazz, Unmesh Banerjee",
+  "InitialKey": "9m",
+  "BeatsPerMinute": 133
+},
+{
   "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Katy Perry - Teenage Dream.mp3",
   "Title": "Teenage Dream",
   "Artist": "Katy Perry",
@@ -125,6 +132,13 @@
   "BeatsPerMinute": 135
 },
 {
+  "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Starjunk 95 - Beat Keep Rockin'.mp3",
+  "Title": "Beat Keep Rockin'",
+  "Artist": "Starjunk 95",
+  "InitialKey": "7m",
+  "BeatsPerMinute": 140
+},
+{
   "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Baalti, Anish Kumar, Stunt Doubles - The Fastest Boxer in the East.mp3",
   "Title": "The Fastest Boxer in the East",
   "Artist": "Baalti, Anish Kumar, Stunt Doubles",
@@ -136,6 +150,13 @@
   "Title": "Spilling",
   "Artist": "Baalti",
   "InitialKey": "11m",
+  "BeatsPerMinute": 140
+},
+{
+  "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/mehboob mere (CHERY edit).mp3",
+  "Title": "mehboob mere (CHERY edit)",
+  "Artist": "",
+  "InitialKey": "12m",
   "BeatsPerMinute": 140
 },
 {
@@ -383,6 +404,13 @@
   "Initialkey": "2m",
   "InitialKey": "2m",
   "BeatsPerMinute": 150
+},
+{
+  "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Flux Pavillion - Bass Cannon (LYNY Flip).mp3",
+  "Title": "Bass Cannon (LYNY Flip)",
+  "Artist": "Flux Pavillion",
+  "InitialKey": "6m",
+  "BeatsPerMinute": 140
 },
 {
   "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Loye loye remix v1.mp3",
@@ -908,6 +936,13 @@
   "BeatsPerMinute": 95
 },
 {
+  "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Wordcolour - Fundamentals.mp3",
+  "Title": "Fundamentals",
+  "Artist": "Wordcolour",
+  "InitialKey": "11m",
+  "BeatsPerMinute": 145
+},
+{
   "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Bally Sagoo - Noorie.mp3",
   "Title": "Noorie",
   "Artist": "Bally Sagoo",
@@ -1049,6 +1084,13 @@
   "BeatsPerMinute": 128
 },
 {
+  "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Sevaqk ft. Sarvjeet Kaur - Jago (UK Garage Remix).mp3",
+  "Title": "Jago (UK Garage Remix)",
+  "Artist": "Sevaqk ft. Sarvjeet Kaur",
+  "InitialKey": "1d",
+  "BeatsPerMinute": 129
+},
+{
   "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Majid Jordan - Superstar.mp3",
   "Title": "Superstar",
   "Artist": "Majid Jordan",
@@ -1132,6 +1174,13 @@
   "Artist": "",
   "InitialKey": "4m",
   "BeatsPerMinute": 122
+},
+{
+  "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Eloquin, Charlie Shell - Left Right Left.mp3",
+  "Title": "Left Right Left (Charlie Shell Remix)",
+  "Artist": "Eloquin, Charlie Shell",
+  "InitialKey": "Dmin",
+  "BeatsPerMinute": 140
 },
 {
   "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/East Side.mp3",
@@ -1410,6 +1459,13 @@
   "BeatsPerMinute": 136
 },
 {
+  "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Dunne - blackbrick.mp3",
+  "Title": "blackbrick (Original Mix)",
+  "Artist": "Dunne",
+  "InitialKey": "10m",
+  "BeatsPerMinute": 138
+},
+{
   "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/SANTO - Baile Inolvidable.mp3",
   "Title": "Baile Inolvidable",
   "Artist": "SANTO",
@@ -1593,6 +1649,13 @@
   "BeatsPerMinute": 172
 },
 {
+  "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/pia ghar ukg - chetan.mp3",
+  "Title": "pia ghar ukg (chetan)",
+  "Artist": "Nusrat Fateh Ali Khan",
+  "InitialKey": "10d",
+  "BeatsPerMinute": 135
+},
+{
   "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Tyla - Water (Jacksound UKG Edit).mp3",
   "Title": "Water (Jacksound UKG Edit)",
   "Artist": "Tyla",
@@ -1612,6 +1675,20 @@
   "Artist": "Disclosure",
   "InitialKey": "3m",
   "BeatsPerMinute": 120
+},
+{
+  "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Ahadadream, ance. - Koi Si.mp3",
+  "Title": "Koi Si (Original Mix)",
+  "Artist": "Ahadadream, ance.",
+  "InitialKey": "Eb Minor",
+  "BeatsPerMinute": 135
+},
+{
+  "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Rae Sremmurd - Swang (KIANA NADINE UKG EDIT).mp3",
+  "Title": "Swang (KIANA NADINE UKG EDIT)",
+  "Artist": "Rae Sremmurd",
+  "InitialKey": "10m",
+  "BeatsPerMinute": 135
 },
 {
   "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Dr Zeus, Dippa Dosanjh - Pathlo.mp3",
@@ -1669,6 +1746,13 @@
   "Artist": "Kodak Black",
   "InitialKey": "7m",
   "BeatsPerMinute": 98
+},
+{
+  "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/The Dare - Tambourine.mp3",
+  "Title": "Tambourine",
+  "Artist": "The Dare",
+  "InitialKey": "2d",
+  "BeatsPerMinute": 130
 },
 {
   "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Skrillex, Missy Elliott, Mr. Oizo - RATATA.mp3",
@@ -1923,6 +2007,13 @@
   "BeatsPerMinute": 164
 },
 {
+  "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Sammy Virji, Tems - Me & U (Sammy Virji Remix).mp3",
+  "Title": "Me & U (Sammy Virji Remix)",
+  "Artist": "Sammy Virji, Tems",
+  "InitialKey": "11d",
+  "BeatsPerMinute": 136
+},
+{
   "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Boy's a liar Pt.2 (koicha Edit) [Extended Mix].mp3",
   "Title": "Boy's a liar Pt.2 (koicha UKG Edit) [Extended Mix]",
   "Artist": "Gud Griff, Young Earth Sauce",
@@ -1949,6 +2040,13 @@
   "Artist": "Disclosure",
   "InitialKey": "8m",
   "BeatsPerMinute": 130
+},
+{
+  "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/MPH - Crescendolls Edit.mp3",
+  "Title": "Crescendolls Edit",
+  "Artist": "MPH",
+  "InitialKey": "12d",
+  "BeatsPerMinute": 135
 },
 {
   "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/El Shab Arab - Lw Kan.mp3",
@@ -2088,11 +2186,25 @@
   "BeatsPerMinute": 126
 },
 {
+  "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Tsvi, DJ Plead - Breath Work.mp3",
+  "Title": "Breath Work",
+  "Artist": "Tsvi, DJ Plead",
+  "InitialKey": "9m",
+  "BeatsPerMinute": 133
+},
+{
   "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Khalid, Disclosure - Know Your Worth (feat. Davido & Tems).mp3",
   "Title": "Know Your Worth (feat. Davido & Tems)",
   "Artist": "Khalid, Disclosure, Davido, Tems",
   "InitialKey": "12m",
   "BeatsPerMinute": 103
+},
+{
+  "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/KANYE WEST - LOVE LOCKDOWN (KIANA NADINE UKG FLIP).mp3",
+  "Title": "LOVE LOCKDOWN (KIANA NADINE UKG FLIP)",
+  "Artist": "Kanye West",
+  "InitialKey": "5m",
+  "BeatsPerMinute": 132
 },
 {
   "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/AJD - Gangsta Massive Ft. Karan Aujla, Drake & YG.mp3",
@@ -2128,6 +2240,20 @@
   "Artist": "Talal Qureshi",
   "InitialKey": "5m",
   "BeatsPerMinute": 140
+},
+{
+  "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Wantigga - Off My Mind.mp3",
+  "Title": "Off My Mind",
+  "Artist": "Wantigga",
+  "InitialKey": "4m",
+  "BeatsPerMinute": 134
+},
+{
+  "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Oldboy - Extender.mp3",
+  "Title": "Extender (Original Mix)",
+  "Artist": "Oldboy",
+  "InitialKey": "7m",
+  "BeatsPerMinute": 135
 },
 {
   "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/LOSTBOYJAY - COULD BE WRONG (James Hiraeth remix).mp3",
@@ -2170,6 +2296,13 @@
   "Artist": "Baby Keem, Kendrick Lamar",
   "InitialKey": "2m",
   "BeatsPerMinute": 120
+},
+{
+  "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Fake Tattoos - Daulat .mp3",
+  "Title": "Daulat  (Original Mix)",
+  "Artist": "Fake Tattoos",
+  "InitialKey": "Bb Major",
+  "BeatsPerMinute": 124
 },
 {
   "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Kazinama, Nusrat Fateh Ali Khan - Kiven Mukhre.mp3",
@@ -2242,6 +2375,13 @@
   "BeatsPerMinute": 140
 },
 {
+  "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Skrillex, Porter Robinson & Bibi Bourelly - Still Here (with the ones that I came with).mp3",
+  "Title": "Still Here (with the ones that I came with)",
+  "Artist": "Skrillex, Porter Robinson & Bibi Bourelly",
+  "InitialKey": "12d",
+  "BeatsPerMinute": 130
+},
+{
   "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/King, Nick Jonas - Maan Meri Jaan (Afterlife).mp3",
   "Title": "Maan Meri Jaan (Afterlife)",
   "Artist": "King",
@@ -2268,6 +2408,13 @@
   "Artist": "ZEEMUFFIN",
   "InitialKey": "7m",
   "BeatsPerMinute": 103
+},
+{
+  "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/AKDM - Bollywood Bass.mp3",
+  "Title": "Bollywood Bass",
+  "Artist": "AKDM",
+  "InitialKey": "11m",
+  "BeatsPerMinute": 130
 },
 {
   "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Charli xcx & Shygirl - 365 featuring shygirl.mp3",
@@ -2313,7 +2460,7 @@
 },
 {
   "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Unknown T - Goodums (Sammy Virji remix).mp3",
-  "Title": "Goodums",
+  "Title": "Goodums (Sammy Virji Remix)",
   "Artist": "Unknown T",
   "InitialKey": "8m",
   "BeatsPerMinute": 138
@@ -2508,6 +2655,13 @@
   "BeatsPerMinute": 122
 },
 {
+  "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/MPH - Against The Clock.mp3",
+  "Title": "Against The Clock",
+  "Artist": "MPH/EV",
+  "InitialKey": "12m",
+  "BeatsPerMinute": 135
+},
+{
   "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Central Cee - Sprinter (Young Franco Remix).mp3",
   "Title": "Sprinter (Young Franco Remix)",
   "Artist": "Central Cee x Dave",
@@ -2541,6 +2695,13 @@
   "Artist": "Anderson .Paak",
   "InitialKey": "5m",
   "BeatsPerMinute": 109
+},
+{
+  "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/DJ SUDI - mere sapno ki afro.mp3",
+  "Title": "mere sapno ki afro",
+  "Artist": "DJ SUDI",
+  "InitialKey": "7d",
+  "BeatsPerMinute": 130
 },
 {
   "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Kanye West - CARNIVAL.mp3",
@@ -2583,6 +2744,13 @@
   "Artist": "NAV",
   "InitialKey": "9m",
   "BeatsPerMinute": 81
+},
+{
+  "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Raf-Saperra, Bobby Kang - Pend Khalli.mp3",
+  "Title": "Pend Khalli",
+  "Artist": "Raf-Saperra, Bobby Kang",
+  "InitialKey": "11m",
+  "BeatsPerMinute": 97
 },
 {
   "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/KAYTRANADA - LITE SPOTS (camoufly Edit).mp3",
@@ -3245,6 +3413,13 @@
   "BeatsPerMinute": 134
 },
 {
+  "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/AKU, Bal-t - RUDE BOLIYAN.mp3",
+  "Title": "RUDE BOLIYAN",
+  "Artist": "AKU, Bal-t",
+  "InitialKey": "9m",
+  "BeatsPerMinute": 140
+},
+{
   "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Rahul Sipligunj _ Kaala Bhairava - Naatu Naatu.mp3",
   "Title": "Naatu Naatu",
   "Artist": "Rahul Sipligunj & Kaala Bhairava",
@@ -3385,6 +3560,13 @@
   "BeatsPerMinute": 133
 },
 {
+  "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Calvin Harris - Slide [L8nite UKG Remix].mp3",
+  "Title": "Slide [L8nite UKG Remix]",
+  "Artist": "Calvin Harris",
+  "InitialKey": "5m",
+  "BeatsPerMinute": 138
+},
+{
   "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Kabhi Aar Kabhi Paar (Sana UKG Flip).mp3",
   "Title": "Kabhi Aar Kabhi Paar (Sana UKG Flip)",
   "Artist": "",
@@ -3418,6 +3600,13 @@
   "Artist": "Etherwood; Hugh Hardie",
   "InitialKey": "12m",
   "BeatsPerMinute": 174
+},
+{
+  "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/KIANA NADINE - All Falls Down Dub.mp3",
+  "Title": "All Falls Down (KIANA NADINE Dub)",
+  "Artist": "Kanye West",
+  "InitialKey": "8m",
+  "BeatsPerMinute": 135
 },
 {
   "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Teedra Moses - Be Your Girl (Kaytranada Edition).mp3",
@@ -3488,6 +3677,13 @@
   "Artist": "Stave, Kanye West",
   "InitialKey": "5m",
   "BeatsPerMinute": 133
+},
+{
+  "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Alott - Horizon.mp3",
+  "Title": "Horizon",
+  "Artist": "Alott",
+  "InitialKey": "9m",
+  "BeatsPerMinute": 130
 },
 {
   "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Omar ؏ - Mast Kalander.mp3",
@@ -3660,6 +3856,13 @@
   "BeatsPerMinute": 135
 },
 {
+  "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Pablo Dutta - Pyaar-Zindagi.mp3",
+  "Title": "Pyaar/Zindagi",
+  "Artist": "Pablo Dutta",
+  "InitialKey": "10d",
+  "BeatsPerMinute": 140
+},
+{
   "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Kalbaisakhi X Kimeraa - Saynapiano.mp3",
   "Title": "Saynapiano",
   "Artist": "Kalbaisakhi X Kimeraa",
@@ -3693,6 +3896,13 @@
   "Artist": "",
   "InitialKey": "5m",
   "BeatsPerMinute": 128
+},
+{
+  "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/MPH, Skrillex - Mirage.mp3",
+  "Title": "Mirage",
+  "Artist": "MPH, Skrillex",
+  "InitialKey": "12d",
+  "BeatsPerMinute": 142
 },
 {
   "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Fred again.. - Delilah (pull me out of this).mp3",
@@ -3743,6 +3953,13 @@
   "Initialkey": "3m",
   "InitialKey": "3m",
   "BeatsPerMinute": 140
+},
+{
+  "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Lorenzo BITW, Ciauru - Astro.mp3",
+  "Title": "Astro",
+  "Artist": "Lorenzo BITW, Ciauru",
+  "InitialKey": "5m",
+  "BeatsPerMinute": 130
 },
 {
   "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Volo - Last Nomad.mp3",
@@ -3828,6 +4045,13 @@
   "Artist": "SANTO x DJ HABIBEATS",
   "InitialKey": "7m",
   "BeatsPerMinute": 143
+},
+{
+  "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Megra, Cameo Blush, Rose Gray - Elixir.mp3",
+  "Title": "Elixir",
+  "Artist": "Megra, Cameo Blush, Rose Gray",
+  "InitialKey": "12m",
+  "BeatsPerMinute": 140
 },
 {
   "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/We Groovin (with Jazzy).mp3",
@@ -4148,6 +4372,20 @@
   "BeatsPerMinute": 140
 },
 {
+  "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/kaho na kaho (gritty) v0.3.mp3",
+  "Title": "kaho na kaho (gritty) v0.3",
+  "Artist": "",
+  "InitialKey": "10m",
+  "BeatsPerMinute": 136
+},
+{
+  "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Megra - I Stay.mp3",
+  "Title": "I Stay",
+  "Artist": "Megra",
+  "InitialKey": "3m",
+  "BeatsPerMinute": 137
+},
+{
   "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/DJ HABIBEATS & Giovanni Khoury - DAL3OUNA!.mp3",
   "Title": "DAL3OUNA!",
   "Artist": "DJ HABIBEATS; Giovanni Khoury",
@@ -4346,6 +4584,13 @@
   "Artist": "Enes Cinpolat",
   "InitialKey": "10m",
   "BeatsPerMinute": 110
+},
+{
+  "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/WE FOUND ARABIC (FOR-B REMIX).mp3",
+  "Title": "WE FOUND LOVE ARABIC (FOR-B REMIX)",
+  "Artist": "Rihana",
+  "InitialKey": "7m",
+  "BeatsPerMinute": 130
 },
 {
   "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/JEV - change of plans.mp3",
@@ -4769,13 +5014,6 @@
   "BeatsPerMinute": 112
 },
 {
-  "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Interplanetary Criminal, Riko Dan - Gunman.mp3",
-  "Title": "Gunman",
-  "Artist": "Interplanetary Criminal; Riko Dan",
-  "InitialKey": "3m",
-  "BeatsPerMinute": 138
-},
-{
   "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Sammy Virji & Issey Cross - Nostalgia.mp3",
   "Title": "Nostalgia",
   "Artist": "Sammy Virji; Issey Cross",
@@ -4919,13 +5157,6 @@
   "BeatsPerMinute": 133
 },
 {
-  "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Peng Black Girls Remix (feat. Jorja Smith).mp3",
-  "Title": "Peng Black Girls Remix (feat. Jorja Smith)",
-  "Artist": "ENNY/Jorja Smith",
-  "InitialKey": "2m",
-  "BeatsPerMinute": 137
-},
-{
   "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Knock2 - Rock Ur World (feat. fussy).mp3",
   "Title": "Rock Ur World (feat. fussy)",
   "Artist": "Knock2",
@@ -4966,4 +5197,11 @@
   "Artist": "DNCE",
   "InitialKey": "1m",
   "BeatsPerMinute": 119
+},
+{
+  "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Nusrat Fateh Ali Khan, Ahadadream - Tere Bin.mp3",
+  "Title": "Tere Bin (Original Mix)",
+  "Artist": "Nusrat Fateh Ali Khan, Ahadadream",
+  "InitialKey": "Bb Major",
+  "BeatsPerMinute": 97
 }]
