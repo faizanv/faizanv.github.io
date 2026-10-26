@@ -10,9 +10,9 @@
     "update-music": "bash scripts/update-music-library.sh"
   },
   "dependencies": {
-    "@astrojs/react": "^5.0.2",
+    "@astrojs/react": "^7.1.1",
     "@svar-ui/react-grid": "^2.6.1",
-    "astro": "^5.16.1",
+    "astro": "^7.4.2",
     "canvas-confetti": "^1.9.3"
   }
 }
