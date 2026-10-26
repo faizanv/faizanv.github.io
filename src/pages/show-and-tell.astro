@@ -37,7 +37,7 @@ import LinkButton from "../components/LinkButton.astro";
 
     <div class="audio-section" id="tera-chera">
       <div class="card-header">
-        <h2>Tera Chehra (crying in the club dub)</h2>
+        <h2>Tera Chehra (<span class="accent-alt">crying in the club dub</span>)</h2>
         <div class="card-action">
           <LinkButton sectionId="tera-chera" />
         </div>
@@ -49,19 +49,16 @@ import LinkButton from "../components/LinkButton.astro";
         frameborder="no"
         allow="autoplay"
         src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2265718682&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
-      ></iframe><div
-        style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"
-      >
+      ></iframe>      <div class="soundcloud-attribution">
         <a
           href="https://soundcloud.com/faizanv"
           title="faizan"
           target="_blank"
-          style="color: #cccccc; text-decoration: none;">faizan</a
+          >faizan</a
         > · <a
           href="https://soundcloud.com/faizanv/tera-chehra-dub"
           title="Tera chehra (crying in the club dub)"
           target="_blank"
-          style="color: #cccccc; text-decoration: none;"
           >Tera chehra (crying in the club dub)</a
         >
       </div>
@@ -122,7 +119,7 @@ import LinkButton from "../components/LinkButton.astro";
 
     <div class="audio-section" id="lift-karadey">
       <div class="card-header">
-        <h2>Lift Karadey dub</h2>
+        <h2>Lift Karadey <span class="accent-alt">dub</span></h2>
         <div class="card-action">
           <LinkButton sectionId="lift-karadey" />
         </div>
@@ -135,19 +132,17 @@ import LinkButton from "../components/LinkButton.astro";
         allow="autoplay"
         src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2055914528&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
       ></iframe>
-      <div
-        style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"
-      >
+      <div class="soundcloud-attribution">
         <a
           href="https://soundcloud.com/faizanv"
           title="Faizan"
           target="_blank"
-          style="color: #cccccc; text-decoration: none;">Faizan</a
+          >Faizan</a
         > · <a
           href="https://soundcloud.com/faizanv/lift-karadey-dub"
           title="Lift Karadey dub"
           target="_blank"
-          style="color: #cccccc; text-decoration: none;">Lift Karadey dub</a
+          >Lift Karadey dub</a
         >
       </div>
     </div>
@@ -155,6 +150,20 @@ import LinkButton from "../components/LinkButton.astro";
 </Layout>
 
 <style>
+  :global(body) {
+    --color-background: #141210;
+    --color-surface: #1E1A17;
+    --color-primary-text: #F4EDE4;
+    --color-secondary-text: #A89B8C;
+    --color-accent: #E8A33D;
+    --color-accent-alt: #D4593B;
+    --color-border: #332C26;
+
+    background: var(--color-background);
+    background-attachment: fixed;
+    color: var(--color-primary-text);
+  }
+
   * {
     box-sizing: border-box;
   }
@@ -179,7 +188,7 @@ import LinkButton from "../components/LinkButton.astro";
     height: 60px;
     width: 60px;
     object-fit: contain;
-    border: 1px solid #007acc;
+    border: 1px solid var(--color-accent);
     border-radius: 50%;
   }
 
@@ -191,7 +200,7 @@ import LinkButton from "../components/LinkButton.astro";
   }
 
   h1 {
-    color: #333;
+    color: var(--color-primary-text);
     text-align: center;
     margin-bottom: 1rem;
   }
@@ -199,21 +208,31 @@ import LinkButton from "../components/LinkButton.astro";
   p {
     text-align: center;
     margin-bottom: 2rem;
-    color: #666;
+    color: var(--color-secondary-text);
+  }
+
+  a {
+    color: var(--color-accent);
+    transition: color 0.2s ease;
+  }
+
+  a:hover {
+    color: var(--color-accent);
+  }
+
+  a:active {
+    color: var(--color-accent-alt);
   }
 
   .audio-section {
-    background: rgba(244, 246, 249, 0.9);
-    border: 1px solid rgba(148, 163, 184, 0.25);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
     border-radius: 16px;
     padding: 2rem;
     margin-bottom: 2rem;
     box-shadow:
-      0 8px 18px rgba(15, 23, 42, 0.08),
-      0 18px 38px rgba(15, 23, 42, 0.08),
-      0 1px 0 rgba(255, 255, 255, 0.8) inset;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+      0 8px 18px color-mix(in srgb, var(--color-background), transparent 40%),
+      0 18px 38px color-mix(in srgb, var(--color-background), transparent 25%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -225,8 +244,8 @@ import LinkButton from "../components/LinkButton.astro";
     width: 100%;
     border-radius: 24px;
     overflow: hidden;
-    background: rgba(15, 23, 42, 0.03);
-    border: 1px solid rgba(148, 163, 184, 0.2);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
   }
 
   .kaho-embed iframe {
@@ -254,13 +273,40 @@ import LinkButton from "../components/LinkButton.astro";
   }
 
   .audio-section:target {
-    background: rgba(244, 246, 249, 1);
-    box-shadow: 0 16px 32px rgba(0, 122, 204, 0.12);
-    border: 2px solid rgba(0, 122, 204, 0.5);
+    background: var(--color-surface);
+    box-shadow: 0 16px 32px color-mix(in srgb, var(--color-accent), transparent 84%);
+    border: 2px solid var(--color-accent);
+  }
+
+  .accent-alt {
+    color: var(--color-accent-alt);
+  }
+
+  .soundcloud-attribution {
+    width: 100%;
+    overflow: hidden;
+    color: var(--color-secondary-text);
+    font-family: Interstate, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans",
+      Garuda, Verdana, Tahoma, sans-serif;
+    font-size: 10px;
+    font-weight: 100;
+    line-break: anywhere;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-break: normal;
+  }
+
+  .soundcloud-attribution a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .soundcloud-attribution a:hover {
+    color: var(--color-accent);
   }
 
   h2 {
-    color: #333;
+    color: var(--color-primary-text);
     margin: 0;
     text-align: left;
     flex: 1;
@@ -283,8 +329,8 @@ import LinkButton from "../components/LinkButton.astro";
 
   .download-button {
     display: inline-block;
-    background: #007acc;
-    color: white;
+    background: var(--color-accent);
+    color: var(--color-surface);
     padding: 0.75rem 1.5rem;
     text-decoration: none;
     border-radius: 6px;
@@ -293,7 +339,12 @@ import LinkButton from "../components/LinkButton.astro";
   }
 
   .download-button:hover {
-    background: #005a9d;
+    background: var(--color-accent);
+    color: var(--color-surface);
+  }
+
+  .download-button:active {
+    background: var(--color-accent-alt);
   }
 
   iframe {
