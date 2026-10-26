@@ -19,6 +19,14 @@ const tracks = (musicLibraryRaw as MusicTrack[]).map((track, index) => ({
 <Layout title="Music Library" ogTitle="Music Library | Faizan Virani">
 	<main class="music-library-page">
 		<h1>Music Library</h1>
+		<a
+			class="library-download"
+			href="https://mega.nz/folder/dzQDjAwB#Aq4_VZCokhUtHbSGZJn3NA"
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			Download links
+		</a>
 		<MusicLibraryGrid client:load data={tracks} />
 	</main>
 </Layout>
@@ -31,6 +39,11 @@ const tracks = (musicLibraryRaw as MusicTrack[]).map((track, index) => ({
 	h1 {
 		margin: 0;
 		font-size: 2rem;
+	}
+
+	.library-download {
+		display: inline-block;
+		margin: 1rem 0 1.5rem;
 	}
 
 	.subtitle {

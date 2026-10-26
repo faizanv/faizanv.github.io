@@ -1,4 +1,4 @@
-import { Grid } from "@svar-ui/react-grid";
+import { Grid, type IColumnConfig } from "@svar-ui/react-grid";
 import "@svar-ui/react-grid/all.css";
 import { useMemo, useState } from "react";
 
@@ -14,11 +14,11 @@ type MusicLibraryGridProps = {
   data: MusicTrackRow[];
 };
 
-const columns = [
+const columns: IColumnConfig[] = [
+  { id: "BeatsPerMinute", header: "BPM", sort: true, width: 60 },
   { id: "Title", header: "Title", width: 200, sort: true },
-  { id: "Artist", header: "Artist", width: 150, sort: true },
-  { id: "InitialKey", header: "Key", width: 75, sort: true },
-  { id: "BeatsPerMinute", header: "BPM", width: 100, sort: true },
+  { id: "Artist", header: "Artist", width: 125, sort: true },
+  { id: "InitialKey", header: "Key", sort: true },
 ];
 
 export default function MusicLibraryGrid({ data }: MusicLibraryGridProps) {
