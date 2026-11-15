@@ -11,7 +11,7 @@ import LinkButton from "../components/LinkButton.astro";
     </a>
   </nav>
   <main>
-    <h1 class="beat">Show and Tell</h1>
+    <h1>Show and Tell</h1>
     <p>
       Here are a few things I've been working on. Let me know what you think!
     </p>
@@ -165,6 +165,65 @@ import LinkButton from "../components/LinkButton.astro";
     </div>
   </main>
 </Layout>
+
+<script>
+  const sections = Array.from(
+    document.querySelectorAll<HTMLElement>(".audio-section"),
+  ).map((section) => ({
+    section,
+    title: section.querySelector<HTMLElement>("h2"),
+  }));
+  let updateScheduled = false;
+
+  function updateBeatingTitle() {
+    updateScheduled = false;
+    const isAtPageBottom =
+      window.innerHeight + window.scrollY >=
+      document.documentElement.scrollHeight - 2;
+    if (isAtPageBottom) {
+      const lastTitle = sections.at(-1)?.title;
+      for (const { title } of sections) {
+        title?.classList.toggle("beat", title === lastTitle);
+      }
+      return;
+    }
+
+    const viewportCenter = window.innerHeight / 2;
+    let closestTitle: HTMLElement | null = null;
+    let closestDistance = Number.POSITIVE_INFINITY;
+
+    for (const { section, title } of sections) {
+      if (!title) continue;
+
+      const bounds = section.getBoundingClientRect();
+      const distance =
+        viewportCenter < bounds.top
+          ? bounds.top - viewportCenter
+          : viewportCenter > bounds.bottom
+            ? viewportCenter - bounds.bottom
+            : 0;
+
+      if (distance < closestDistance) {
+        closestDistance = distance;
+        closestTitle = title;
+      }
+    }
+
+    for (const { title } of sections) {
+      title?.classList.toggle("beat", title === closestTitle);
+    }
+  }
+
+  function scheduleTitleUpdate() {
+    if (updateScheduled) return;
+    updateScheduled = true;
+    window.requestAnimationFrame(updateBeatingTitle);
+  }
+
+  window.addEventListener("scroll", scheduleTitleUpdate, { passive: true });
+  window.addEventListener("resize", scheduleTitleUpdate);
+  updateBeatingTitle();
+</script>
 
 <style>
   :global(body) {
