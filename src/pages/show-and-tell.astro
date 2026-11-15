@@ -11,10 +11,27 @@ import LinkButton from "../components/LinkButton.astro";
     </a>
   </nav>
   <main>
-    <h1>Show and Tell</h1>
+    <h1 class="beat">Show and Tell</h1>
     <p>
       Here are a few things I've been working on. Let me know what you think!
     </p>
+
+    <div class="audio-section" id="dj-set-vol-2">
+      <div class="card-header">
+        <h2>1hr DJ Set - UKG x Desi x Bass</h2>
+        <div class="card-action">
+          <LinkButton sectionId="dj-set-vol-2" />
+        </div>
+      </div>
+      <iframe
+        width="500"
+        src="https://www.youtube.com/embed/rkjLpxzP2Jo?si=dkygZzxOSjJUqlwN"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen></iframe>
+    </div>
 
     <div class="audio-section" id="kaho-na-kaho">
       <div class="card-header">
@@ -205,6 +222,41 @@ import LinkButton from "../components/LinkButton.astro";
     margin-bottom: 1rem;
   }
 
+  .beat {
+    --bpm: 50;
+    transform-origin: center;
+    animation: beat calc(60s / var(--bpm)) cubic-bezier(0.2, 0.9, 0.3, 1) infinite;
+  }
+
+  @keyframes beat {
+    0% {
+      transform: scale(1);
+    }
+
+    5% {
+      transform: scale(1.08);
+    }
+
+    16% {
+      transform: scale(1.01);
+    }
+
+    24% {
+      transform: scale(1.06);
+    }
+
+    45%,
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .beat {
+      animation: none;
+    }
+  }
+
   p {
     text-align: center;
     margin-bottom: 2rem;
@@ -214,10 +266,6 @@ import LinkButton from "../components/LinkButton.astro";
   a {
     color: var(--color-accent);
     transition: color 0.2s ease;
-  }
-
-  a:hover {
-    color: var(--color-accent);
   }
 
   a:active {
@@ -244,7 +292,6 @@ import LinkButton from "../components/LinkButton.astro";
     width: 100%;
     border-radius: 24px;
     overflow: hidden;
-    background: var(--color-surface);
     border: 1px solid var(--color-border);
   }
 
@@ -273,7 +320,6 @@ import LinkButton from "../components/LinkButton.astro";
   }
 
   .audio-section:target {
-    background: var(--color-surface);
     box-shadow: 0 16px 32px color-mix(in srgb, var(--color-accent), transparent 84%);
     border: 2px solid var(--color-accent);
   }
@@ -312,16 +358,6 @@ import LinkButton from "../components/LinkButton.astro";
     flex: 1;
   }
 
-  .audio-player {
-    text-align: center;
-    margin-bottom: 1.5rem;
-  }
-
-  audio {
-    min-width: 300px;
-    height: 54px;
-  }
-
   .download-section {
     text-align: center;
     margin-top: 16px;
@@ -338,11 +374,6 @@ import LinkButton from "../components/LinkButton.astro";
     transition: background-color 0.2s ease;
   }
 
-  .download-button:hover {
-    background: var(--color-accent);
-    color: var(--color-surface);
-  }
-
   .download-button:active {
     background: var(--color-accent-alt);
   }
@@ -350,6 +381,12 @@ import LinkButton from "../components/LinkButton.astro";
   iframe {
     max-width: 100%;
     height: auto;
+  }
+
+  .audio-section iframe[src*="youtube.com"] {
+    width: 100%;
+    max-width: 560px;
+    aspect-ratio: 16 / 9;
   }
 
   .tiktok-embed {
@@ -363,10 +400,6 @@ import LinkButton from "../components/LinkButton.astro";
 
     .audio-section {
       padding: 1rem;
-    }
-
-    audio {
-      min-width: 240px;
     }
   }
 </style>

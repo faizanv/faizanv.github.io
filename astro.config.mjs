@@ -12,6 +12,7 @@ export default defineConfig({
     ],
   },
   redirects: {
+    "/links": "/show-and-tell",
     "/resume": "/FaizanViraniResume.pdf",
   },
 });
