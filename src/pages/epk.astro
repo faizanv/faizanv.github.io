@@ -77,7 +77,7 @@ const soundcloudEmbedUrl = (url: string) =>
       <div class="hero">
         <div>
           <p class="eyebrow">DJ/Producer · BROOKLYN, NY</p>
-          <h1 id="hero-title">faizan</h1>
+          <h1 id="hero-title" class="beat">faizan</h1>
           <p class="hero-subtitle">Yet another transplant living in Brooklyn and spending way too much time in Bushwick</p>
           <div class="genres" aria-label="Genres">
             <span>UKG</span>
@@ -147,6 +147,7 @@ const soundcloudEmbedUrl = (url: string) =>
       <div class="section-heading">
         <div>
           <p class="section-kicker">// Music</p>
+          <h2 class="beat">DJ Sets and Remixes</h2>
         </div>
       </div>
       <p class="also">More on SoundCloud: <a href="https://soundcloud.com/faizanv" target="_blank" rel="noopener noreferrer">faizanv ↗</a></p>
@@ -174,7 +175,7 @@ const soundcloudEmbedUrl = (url: string) =>
     <section id="media" class="content-section section-rule">
       <div class="section-heading">
         <div>
-          <p class="section-kicker">04 / Media</p>
+          <p class="section-kicker">// Media</p>
           <h2>Media Photos</h2>
         </div>
       </div>
@@ -483,6 +484,35 @@ const soundcloudEmbedUrl = (url: string) =>
     text-transform: lowercase;
   }
 
+  .beat {
+    --bpm: 50;
+    transform-origin: center;
+    animation: beat calc(60s / var(--bpm)) cubic-bezier(0.2, 0.9, 0.3, 1) infinite;
+  }
+
+  @keyframes beat {
+    0% {
+      transform: scale(1);
+    }
+
+    5% {
+      transform: scale(1.04);
+    }
+
+    16% {
+      transform: scale(1.01);
+    }
+
+    24% {
+      transform: scale(1.02);
+    }
+
+    45%,
+    100% {
+      transform: scale(1);
+    }
+  }
+
   .hero-subtitle {
     max-width: 28rem;
     margin: 0;
@@ -729,6 +759,10 @@ const soundcloudEmbedUrl = (url: string) =>
   @media (prefers-reduced-motion: reduce) {
     :global(html) {
       scroll-behavior: auto;
+    }
+
+    .beat {
+      animation: none;
     }
 
     *,
