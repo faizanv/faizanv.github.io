@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+// @ts-expect-error Splide's CSS entry point does not provide TypeScript declarations.
 import "@splidejs/splide/css";
 import Layout from "../layouts/Layout.astro";
 
@@ -24,23 +25,23 @@ const mixes = [
   },
 ];
 
-const pressPhotos = [
+const mediaPhotos = [
   {
-    label: "Elsewhere",
+    label: "Elsewhere - DAYTIMERS Loft Takeover",
     alt: "faizan performing at Elsewhere",
     src: "/elsewhere.webp",
     width: 1000,
     height: 1334,
   },
   {
-    label: "DJ set",
+    label: "Eris Evolution - abunDANCE 2026",
     alt: "faizan performing at a DJ mixer",
     src: "/DJ_header.webp",
     width: 1000,
     height: 1334,
   },
   {
-    label: "Eris Evolution",
+    label: "Eris Evolution - abunDANCE 2026",
     alt: "Dance floor at Eris Evolution",
     src: "/eris1.webp",
     width: 1000,
@@ -66,7 +67,7 @@ const soundcloudEmbedUrl = (url: string) =>
       <nav class="primary-nav" aria-label="Page sections">
         <a href="#bio">About</a>
         <a href="#mixes">Music</a>
-        <a href="#press">Press</a>
+        <a href="#media">Media</a>
       </nav>
     </div>
   </header>
@@ -128,11 +129,11 @@ const soundcloudEmbedUrl = (url: string) =>
       <div class="bio-copy">
         <p>With a background in percussion and Pakistani music, <span class="bio-name">faizan</span> loves nothing more than playing a Qawwali remix at the club in between face melting bangers. His sets move between South Asian sounds, modern UKG, and bass, built for high-energy rooms and dancefloor moments that catch people off guard.</p>
         <p>
-          He has been performing in New York since 2022 with sets at Elsewhere
-          and Eris, and remixes featured on The Lot Radio and BBC Asian Network.
+          He has been performing in New York since 2022 with sets at Elsewhere, Unveiled,
+          and Eris and remixes featured on The Lot Radio and BBC Asian Network.
         </p>
         <p>
-          He is also a member of{' '}
+          Member of{' '}
           <a
             href="https://www.instagram.com/daytimers_nyc/"
             target="_blank"
@@ -170,22 +171,22 @@ const soundcloudEmbedUrl = (url: string) =>
       </div>
     </section>
 
-    <section id="press" class="content-section section-rule">
+    <section id="media" class="content-section section-rule">
       <div class="section-heading">
         <div>
-          <p class="section-kicker">04 / Press</p>
-          <h2>Press Photos</h2>
+          <p class="section-kicker">04 / Media</p>
+          <h2>Media Photos</h2>
         </div>
       </div>
-      <div id="press-carousel" class="splide press-carousel" aria-label="Press photo carousel">
+      <div id="media-carousel" class="splide media-carousel" aria-label="Media photo carousel">
         <div class="splide__track">
           <ul class="splide__list"></ul>
         </div>
       </div>
-      <template id="press-carousel-slides">
-        {pressPhotos.map((photo) => (
+      <template id="media-carousel-slides">
+        {mediaPhotos.map((photo) => (
           <li class="splide__slide">
-            <figure class="press-slide">
+            <figure class="media-slide">
               <Image
                 src={photo.src}
                 alt={photo.alt}
@@ -199,7 +200,6 @@ const soundcloudEmbedUrl = (url: string) =>
         ))}
       </template>
     </section>
-
   </main>
 
   <footer class="site-footer">
@@ -215,19 +215,19 @@ const soundcloudEmbedUrl = (url: string) =>
 <script>
   import Splide from "@splidejs/splide";
 
-  const pressSection = document.querySelector<HTMLElement>("#press");
-  const pressCarousel = document.querySelector<HTMLElement>("#press-carousel");
-  const pressSlidesTemplate = document.querySelector<HTMLTemplateElement>("#press-carousel-slides");
-  const pressSlideList = pressCarousel?.querySelector<HTMLUListElement>(".splide__list");
+  const mediaSection = document.querySelector<HTMLElement>("#media");
+  const mediaCarousel = document.querySelector<HTMLElement>("#media-carousel");
+  const mediaSlidesTemplate = document.querySelector<HTMLTemplateElement>("#media-carousel-slides");
+  const mediaSlideList = mediaCarousel?.querySelector<HTMLUListElement>(".splide__list");
 
-  if (!pressSection || !pressCarousel || !pressSlidesTemplate || !pressSlideList) {
-    console.error("Press carousel markup is incomplete.");
+  if (!mediaSection || !mediaCarousel || !mediaSlidesTemplate || !mediaSlideList) {
+    console.error("Media carousel markup is incomplete.");
   } else {
-    const initializePressCarousel = () => {
-      pressSlideList.append(pressSlidesTemplate.content.cloneNode(true));
-      pressSlidesTemplate.remove();
+    const initializeMediaCarousel = () => {
+      mediaSlideList.append(mediaSlidesTemplate.content.cloneNode(true));
+      mediaSlidesTemplate.remove();
 
-      new Splide(pressCarousel, {
+      new Splide(mediaCarousel, {
         type: "loop",
         perPage: 1,
         perMove: 1,
@@ -245,15 +245,15 @@ const soundcloudEmbedUrl = (url: string) =>
     };
 
     if ("IntersectionObserver" in window) {
-      const pressObserver = new IntersectionObserver((entries) => {
+      const mediaObserver = new IntersectionObserver((entries) => {
         if (entries.some((entry) => entry.isIntersecting)) {
-          pressObserver.disconnect();
-          initializePressCarousel();
+          mediaObserver.disconnect();
+          initializeMediaCarousel();
         }
       });
-      pressObserver.observe(pressSection);
+      mediaObserver.observe(mediaSection);
     } else {
-      initializePressCarousel();
+      initializeMediaCarousel();
     }
   }
 
@@ -378,7 +378,6 @@ const soundcloudEmbedUrl = (url: string) =>
   }
 
   .primary-nav,
-  .button,
   .section-kicker,
   .site-footer {
     font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
@@ -452,34 +451,6 @@ const soundcloudEmbedUrl = (url: string) =>
 
   .primary-nav a:hover,
   .site-footer a:hover {
-    color: var(--text);
-  }
-
-  .button {
-    min-height: 2.75rem;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    padding: 0.75rem 1.35rem;
-    border: 1px solid transparent;
-    border-radius: 0;
-    cursor: pointer;
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    line-height: 1.3;
-    transition: transform 160ms ease;
-  }
-
-  .button:active {
-    transform: scale(0.98);
-  }
-
-  .button-muted {
-    border-color: var(--text);
-    background: transparent;
     color: var(--text);
   }
 
@@ -603,20 +574,14 @@ const soundcloudEmbedUrl = (url: string) =>
 
   .mix-grid {
     display: grid;
-    gap: 1.1rem;
-  }
-
-  .mix-grid {
     grid-template-columns: 1fr;
+    gap: 1.1rem;
   }
 
   .mix-card {
     border: 1px solid var(--border);
     border-radius: 0;
     background: var(--surface);
-  }
-
-  .mix-card {
     padding: 1.25rem;
   }
 
@@ -664,7 +629,7 @@ const soundcloudEmbedUrl = (url: string) =>
     color: var(--accent);
   }
 
-  .press-slide {
+  .media-slide {
     height: min(65vh, 36rem);
     min-height: 18rem;
     display: grid;
@@ -673,7 +638,7 @@ const soundcloudEmbedUrl = (url: string) =>
     margin: 0;
   }
 
-  .press-slide img {
+  .media-slide img {
     width: 100%;
     height: 100%;
     display: block;
@@ -681,7 +646,7 @@ const soundcloudEmbedUrl = (url: string) =>
     object-fit: contain;
   }
 
-  .press-slide figcaption {
+  .media-slide figcaption {
     color: var(--muted);
     font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
     font-size: 0.8rem;
@@ -689,20 +654,20 @@ const soundcloudEmbedUrl = (url: string) =>
     text-transform: uppercase;
   }
 
-  :global(.press-carousel .splide__arrow) {
+  :global(.media-carousel .splide__arrow) {
     background: var(--surface);
     opacity: 1;
   }
 
-  :global(.press-carousel .splide__arrow svg) {
+  :global(.media-carousel .splide__arrow svg) {
     fill: var(--accent);
   }
 
-  :global(.press-carousel .splide__pagination__page) {
+  :global(.media-carousel .splide__pagination__page) {
     background: var(--muted);
   }
 
-  :global(.press-carousel .splide__pagination__page.is-active) {
+  :global(.media-carousel .splide__pagination__page.is-active) {
     background: var(--accent);
   }
 
@@ -738,12 +703,6 @@ const soundcloudEmbedUrl = (url: string) =>
       width: min(100% - 2rem, 960px);
     }
 
-    .button {
-      min-height: 2.6rem;
-      padding: 0.65rem 1rem;
-      font-size: 0.75rem;
-    }
-
     .hero {
       padding-block: 3.5rem;
     }
@@ -757,7 +716,7 @@ const soundcloudEmbedUrl = (url: string) =>
       padding-block: 3rem;
     }
 
-    .press-slide {
+    .media-slide {
       height: min(65vh, 30rem);
       min-height: 16rem;
     }
