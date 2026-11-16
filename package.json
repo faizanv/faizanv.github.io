@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@astrojs/react": "^7.1.1",
+    "@splidejs/splide": "^4.1.4",
     "@svar-ui/react-grid": "^2.6.1",
     "astro": "^7.4.2",
     "canvas-confetti": "^1.9.3"

@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import "@splidejs/splide/css";
 import Layout from "../layouts/Layout.astro";
 
 const bookingEmail = "hello@faizan.fun";
@@ -20,6 +21,30 @@ const mixes = [
   {
     title: "Lift Karadey dub",
     url: "https://soundcloud.com/faizanv/lift-karadey-dub",
+  },
+];
+
+const pressPhotos = [
+  {
+    label: "Elsewhere",
+    alt: "faizan performing at Elsewhere",
+    src: "/elsewhere.webp",
+    width: 1000,
+    height: 1334,
+  },
+  {
+    label: "DJ set",
+    alt: "faizan performing at a DJ mixer",
+    src: "/DJ_header.webp",
+    width: 1000,
+    height: 1334,
+  },
+  {
+    label: "Eris Evolution",
+    alt: "Dance floor at Eris Evolution",
+    src: "/eris1.webp",
+    width: 1000,
+    height: 669,
   },
 ];
 
@@ -102,7 +127,18 @@ const soundcloudEmbedUrl = (url: string) =>
       </div>
       <div class="bio-copy">
         <p>With a background in percussion and Pakistani music, <span class="bio-name">faizan</span> loves nothing more than playing a Qawwali remix at the club in between face melting bangers. His sets move between South Asian sounds, modern UKG, and bass, built for high-energy rooms and dancefloor moments that catch people off guard.</p>
-        <p>He has been performing in New York since 2022 with sets at Elsewhere and Eris, and remixes featured on The Lot Radio and BBC Asian Network.</p>
+        <p>
+          He has been performing in New York since 2022 with sets at Elsewhere
+          and Eris, and remixes featured on The Lot Radio and BBC Asian Network.
+        </p>
+        <p>
+          He is also a member of{' '}
+          <a
+            href="https://www.instagram.com/daytimers_nyc/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >DAYTIMERS NYC</a>.
+        </p>
       </div>
     </section>
 
@@ -138,35 +174,30 @@ const soundcloudEmbedUrl = (url: string) =>
       <div class="section-heading">
         <div>
           <p class="section-kicker">04 / Press</p>
-          <h2>Photos &amp; Wordmark</h2>
+          <h2>Press Photos</h2>
         </div>
       </div>
-      <div class="press-grid">
-        <article class="press-card">
-          <div class="photo-frame">
-            <Image
-              src="/headshot.png"
-              alt="Portrait of faizan for press use"
-              width={324}
-              height={407}
-              loading="lazy"
-            />
-          </div>
-          <div class="press-card-footer">
-            <h3>Press portrait</h3>
-            <a class="button button-small button-muted" href={`mailto:${bookingEmail}?subject=Press%20photo%20request`}>Request photo</a>
-          </div>
-        </article>
-        <article class="press-card">
-          <div class="wordmark-preview">
-            <span class="large-wordmark">faizan</span>
-          </div>
-          <div class="press-card-footer">
-            <h3>Wordmark</h3>
-            <button class="button button-small button-muted download-wordmark" type="button">Download SVG</button>
-          </div>
-        </article>
+      <div id="press-carousel" class="splide press-carousel" aria-label="Press photo carousel">
+        <div class="splide__track">
+          <ul class="splide__list"></ul>
+        </div>
       </div>
+      <template id="press-carousel-slides">
+        {pressPhotos.map((photo) => (
+          <li class="splide__slide">
+            <figure class="press-slide">
+              <Image
+                src={photo.src}
+                alt={photo.alt}
+                width={photo.width}
+                height={photo.height}
+                loading="lazy"
+              />
+              <figcaption>{photo.label}</figcaption>
+            </figure>
+          </li>
+        ))}
+      </template>
     </section>
 
   </main>
@@ -176,19 +207,54 @@ const soundcloudEmbedUrl = (url: string) =>
     <nav aria-label="Contact and profiles">
       <a href={`mailto:${bookingEmail}`}>{bookingEmail}</a>
       <a href="https://soundcloud.com/faizanv" target="_blank" rel="noopener noreferrer">SoundCloud ↗</a>
-      <a href="https://ra.co" target="_blank" rel="noopener noreferrer">RA ↗</a>
+      <a href="https://www.instagram.com/faizanv" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
     </nav>
   </footer>
 </Layout>
 
 <script>
-  function downloadFile(filename: string, content: string, type: string) {
-    const url = URL.createObjectURL(new Blob([content], { type }));
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = filename;
-    link.click();
-    URL.revokeObjectURL(url);
+  import Splide from "@splidejs/splide";
+
+  const pressSection = document.querySelector<HTMLElement>("#press");
+  const pressCarousel = document.querySelector<HTMLElement>("#press-carousel");
+  const pressSlidesTemplate = document.querySelector<HTMLTemplateElement>("#press-carousel-slides");
+  const pressSlideList = pressCarousel?.querySelector<HTMLUListElement>(".splide__list");
+
+  if (!pressSection || !pressCarousel || !pressSlidesTemplate || !pressSlideList) {
+    console.error("Press carousel markup is incomplete.");
+  } else {
+    const initializePressCarousel = () => {
+      pressSlideList.append(pressSlidesTemplate.content.cloneNode(true));
+      pressSlidesTemplate.remove();
+
+      new Splide(pressCarousel, {
+        type: "loop",
+        perPage: 1,
+        perMove: 1,
+        focus: "center",
+        padding: { left: "10%", right: "10%" },
+        gap: "1rem",
+        breakpoints: {
+          640: {
+            arrows: false,
+            gap: "0.5rem",
+            padding: { left: "12%", right: "12%" },
+          },
+        },
+      }).mount();
+    };
+
+    if ("IntersectionObserver" in window) {
+      const pressObserver = new IntersectionObserver((entries) => {
+        if (entries.some((entry) => entry.isIntersecting)) {
+          pressObserver.disconnect();
+          initializePressCarousel();
+        }
+      });
+      pressObserver.observe(pressSection);
+    } else {
+      initializePressCarousel();
+    }
   }
 
   const copyBioButton = document.querySelector<HTMLButtonElement>(".copy-bio-button");
@@ -210,13 +276,6 @@ const soundcloudEmbedUrl = (url: string) =>
       console.error("Failed to copy the bio to the clipboard.", error);
       if (copyBioStatus) copyBioStatus.textContent = "Copy failed";
     }
-  });
-
-  document.querySelectorAll<HTMLButtonElement>(".download-wordmark").forEach((button) => {
-    button.addEventListener("click", () => {
-      const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="400" height="120"><text x="50%" y="68%" dominant-baseline="middle" text-anchor="middle" font-family="system-ui, Arial, sans-serif" font-weight="600" font-size="76" letter-spacing="-1.2" fill="#ffffff">faizan</text></svg>`;
-      downloadFile("faizan_logo_white.svg", svg, "image/svg+xml");
-    });
   });
 
 </script>
@@ -542,8 +601,7 @@ const soundcloudEmbedUrl = (url: string) =>
     line-height: 1.15;
   }
 
-  .mix-grid,
-  .press-grid {
+  .mix-grid {
     display: grid;
     gap: 1.1rem;
   }
@@ -552,8 +610,7 @@ const soundcloudEmbedUrl = (url: string) =>
     grid-template-columns: 1fr;
   }
 
-  .mix-card,
-  .press-card {
+  .mix-card {
     border: 1px solid var(--border);
     border-radius: 0;
     background: var(--surface);
@@ -575,12 +632,6 @@ const soundcloudEmbedUrl = (url: string) =>
     border: 0;
   }
 
-  .press-card-footer h3 {
-    margin: 0;
-    font-size: 1.25rem;
-    line-height: 1.4;
-  }
-
   .bio-copy {
     max-width: 680px;
   }
@@ -595,6 +646,12 @@ const soundcloudEmbedUrl = (url: string) =>
     line-height: 1.7;
   }
 
+  .bio-copy a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+  }
+
   .bio-copy p + p {
     margin-top: 1rem;
   }
@@ -607,42 +664,46 @@ const soundcloudEmbedUrl = (url: string) =>
     color: var(--accent);
   }
 
-  .press-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .press-slide {
+    height: min(65vh, 36rem);
+    min-height: 18rem;
+    display: grid;
+    grid-template-rows: minmax(0, 1fr) auto;
+    gap: 0.75rem;
+    margin: 0;
   }
 
-  .press-card {
-    overflow: hidden;
+  .press-slide img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: var(--background);
+    object-fit: contain;
   }
 
-  .wordmark-preview {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    aspect-ratio: 16 / 10;
-    background: linear-gradient(135deg, #25252c, #111);
+  .press-slide figcaption {
+    color: var(--muted);
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
   }
 
-  .large-wordmark {
-    font-size: clamp(3rem, 7vw, 4.5rem);
-    font-weight: 600;
-    letter-spacing: -0.035em;
-    text-transform: lowercase;
+  :global(.press-carousel .splide__arrow) {
+    background: var(--surface);
+    opacity: 1;
   }
 
-  .press-card-footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    padding: 1.1rem;
+  :global(.press-carousel .splide__arrow svg) {
+    fill: var(--accent);
   }
 
-  .button-small {
-    min-height: 2rem;
-    padding: 0.4rem 0.6rem;
-    font-size: 0.63rem;
-    white-space: nowrap;
+  :global(.press-carousel .splide__pagination__page) {
+    background: var(--muted);
+  }
+
+  :global(.press-carousel .splide__pagination__page.is-active) {
+    background: var(--accent);
   }
 
   .site-footer {
@@ -696,8 +757,9 @@ const soundcloudEmbedUrl = (url: string) =>
       padding-block: 3rem;
     }
 
-    .press-grid {
-      grid-template-columns: 1fr;
+    .press-slide {
+      height: min(65vh, 30rem);
+      min-height: 16rem;
     }
 
     .site-footer {
