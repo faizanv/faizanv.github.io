@@ -159,10 +159,8 @@ const soundcloudEmbedUrl = (url: string) =>
               class="soundcloud-embed"
               src={soundcloudEmbedUrl(mix.url)}
               title={`SoundCloud player for ${mix.title}`}
-              width="100%"
               height="166"
               scrolling="no"
-              frameborder="no"
               allow="autoplay"
               loading="lazy"
               referrerpolicy="strict-origin-when-cross-origin"
@@ -561,10 +559,14 @@ const soundcloudEmbedUrl = (url: string) =>
     background: var(--surface);
   }
 
-  .photo-frame img {
+  .photo-frame img,
+  .media-slide img {
     width: 100%;
     height: 100%;
     display: block;
+  }
+
+  .photo-frame img {
     object-fit: cover;
   }
 
@@ -610,7 +612,6 @@ const soundcloudEmbedUrl = (url: string) =>
 
   .mix-card {
     border: 1px solid var(--border);
-    border-radius: 0;
     background: var(--surface);
     padding: 1.25rem;
   }
@@ -669,9 +670,6 @@ const soundcloudEmbedUrl = (url: string) =>
   }
 
   .media-slide img {
-    width: 100%;
-    height: 100%;
-    display: block;
     background: var(--background);
     object-fit: contain;
   }
@@ -716,10 +714,6 @@ const soundcloudEmbedUrl = (url: string) =>
   }
 
   @media (max-width: 720px) {
-    .primary-nav {
-      display: none;
-    }
-
     .hero {
       grid-template-columns: 1fr;
       gap: 1.5rem;
@@ -731,6 +725,12 @@ const soundcloudEmbedUrl = (url: string) =>
     .page-content,
     .site-footer {
       width: min(100% - 2rem, 960px);
+    }
+
+    .primary-nav {
+      gap: 0.75rem;
+      font-size: 0.7rem;
+      letter-spacing: 0.04em;
     }
 
     .hero {
