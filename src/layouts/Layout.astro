@@ -4,6 +4,7 @@ interface Props {
 	ogTitle?: string;
 	ogDescription?: string;
 	ogImage?: string;
+	theme?: "light" | "dark";
 }
 
 const {
@@ -11,6 +12,7 @@ const {
 	ogTitle = "Faizan Virani",
 	ogDescription = "Faizan Virani's personal website",
 	ogImage = "/brat.png",
+	theme = "light",
 } = Astro.props;
 ---
 
@@ -31,7 +33,7 @@ const {
 			heap.load("4172362005");
 		</script>
 	</head>
-	<body>
+	<body class={theme === "dark" ? "theme-dark" : undefined}>
 		<slot />
 	</body>
 </html>
@@ -47,11 +49,14 @@ const {
 
 	body {
 		padding-top: max(16px, env(safe-area-inset-top, 0px));
+		background-attachment: fixed;
+	}
+
+	body:not(.theme-dark) {
 		background:
 			radial-gradient(circle at top, rgba(148, 163, 184, 0.18), transparent 42%),
 			radial-gradient(circle at bottom right, rgba(59, 130, 246, 0.10), transparent 30%),
 			linear-gradient(180deg, #f8fafc 0%, #eef3f8 100%);
 		color: #0f172a;
-		background-attachment: fixed;
 	}
 </style>
