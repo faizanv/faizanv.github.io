@@ -1,16 +1,25 @@
 ---
+import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 
 const bookingEmail = "hello@faizan.fun";
 
 const mixes = [
   {
-    title: "Faizan Puts You On, Vol. 2",
+    title: "faizan Puts You On, Vol. 2",
     url: "https://soundcloud.com/faizanv/faizan-puts-you-on-vol-2",
   },
   {
-    title: "Faizan Puts You On, Vol. 1 — UKG x Desi Bass x House Mix",
+    title: "faizan Puts You On, Vol. 1",
     url: "https://soundcloud.com/faizanv/faizan-puts-you-on-vol-1-ukg-x-desi-bass-x-house-mix",
+  },
+  {
+    title: "Tera Chehra dub",
+    url: "https://soundcloud.com/faizanv/tera-chehra-dub",
+  },
+  {
+    title: "Lift Karadey dub",
+    url: "https://soundcloud.com/faizanv/lift-karadey-dub",
   },
 ];
 
@@ -22,7 +31,7 @@ const soundcloudEmbedUrl = (url: string) =>
 <Layout
   title="faizan — Electronic Press Kit"
   ogTitle="faizan — Electronic Press Kit"
-  ogDescription="Press kit for faizan, a Brooklyn-based DJ and selector."
+  ogDescription="Press kit for faizan, a Brooklyn-based DJ and producer."
 >
   <a class="skip-link" href="#main">Skip to content</a>
 
@@ -40,7 +49,7 @@ const soundcloudEmbedUrl = (url: string) =>
   <main id="main" class="page-content">
     <section aria-labelledby="hero-title">
       <div class="hero">
-        <div class="hero-copy">
+        <div>
           <p class="eyebrow">DJ/Producer · BROOKLYN, NY</p>
           <h1 id="hero-title">faizan</h1>
           <p class="hero-subtitle">Yet another transplant living in Brooklyn and spending way too much time in Bushwick</p>
@@ -63,11 +72,11 @@ const soundcloudEmbedUrl = (url: string) =>
         </div>
 
         <figure class="photo-frame hero-photo">
-          <img
+          <Image
             src="/DJ_header.webp"
             alt="faizan performing at a DJ mixer"
-            width="1000"
-            height="1334"
+            width={1000}
+            height={1334}
           />
         </figure>
       </div>
@@ -134,15 +143,21 @@ const soundcloudEmbedUrl = (url: string) =>
       </div>
       <div class="press-grid">
         <article class="press-card">
-          <div class="press-image photo-frame">
-            <img src="/headshot.png" alt="Portrait of faizan for press use" loading="lazy" />
+          <div class="photo-frame">
+            <Image
+              src="/headshot.png"
+              alt="Portrait of faizan for press use"
+              width={324}
+              height={407}
+              loading="lazy"
+            />
           </div>
           <div class="press-card-footer">
             <h3>Press portrait</h3>
             <a class="button button-small button-muted" href={`mailto:${bookingEmail}?subject=Press%20photo%20request`}>Request photo</a>
           </div>
         </article>
-        <article class="press-card wordmark-card">
+        <article class="press-card">
           <div class="wordmark-preview">
             <span class="large-wordmark">faizan</span>
           </div>
@@ -215,14 +230,12 @@ const soundcloudEmbedUrl = (url: string) =>
   :global(body) {
     --background: #0d0d0f;
     --surface: #17171b;
-    --surface-raised: #202026;
     --border: #2a2a31;
     --border-strong: #44444d;
     --text: #ecebe6;
     --muted: #9a99a3;
     --accent: #38bdf8;
     margin: 0;
-    padding: 0;
     min-height: 100%;
     background: var(--background);
     color: var(--text);
@@ -242,6 +255,7 @@ const soundcloudEmbedUrl = (url: string) =>
 
   button {
     font: inherit;
+    color: inherit;
   }
 
   button,
@@ -252,10 +266,6 @@ const soundcloudEmbedUrl = (url: string) =>
   a {
     color: inherit;
     text-decoration: none;
-  }
-
-  button {
-    color: inherit;
   }
 
   :focus-visible {
@@ -346,7 +356,6 @@ const soundcloudEmbedUrl = (url: string) =>
     padding: 0;
     border: 0;
     background: transparent;
-    color: inherit;
     cursor: pointer;
   }
 
@@ -362,8 +371,6 @@ const soundcloudEmbedUrl = (url: string) =>
   .copy-bio-status {
     color: var(--accent);
     font-size: 0.7rem;
-    letter-spacing: 0;
-    text-transform: none;
   }
 
   .copy-bio-status:empty {
@@ -411,12 +418,6 @@ const soundcloudEmbedUrl = (url: string) =>
     transform: scale(0.98);
   }
 
-  .button-primary {
-    background: var(--accent);
-    color: var(--background);
-    box-shadow: 0 0 22px rgb(56 189 248 / 38%);
-  }
-
   .button-muted {
     border-color: var(--text);
     background: transparent;
@@ -441,7 +442,6 @@ const soundcloudEmbedUrl = (url: string) =>
     font-size: 0.8rem;
     letter-spacing: 0.25em;
     text-transform: uppercase;
-    text-shadow: 0 0 12px rgb(56 189 248 / 35%);
   }
 
   h1 {
@@ -461,19 +461,11 @@ const soundcloudEmbedUrl = (url: string) =>
     line-height: 1.5;
   }
 
-  .genres,
-  .hero-actions {
+  .genres {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-  }
-
-  .genres {
     margin: 1.35rem 0 2.5rem;
-  }
-
-  .hero-actions {
-    margin-top: 1rem;
   }
 
   .booking-cta {
@@ -489,13 +481,11 @@ const soundcloudEmbedUrl = (url: string) =>
 
   .instagram-booking-link {
     color: #f472b6;
-    text-shadow: 0 0 10px rgb(244 114 182 / 65%);
   }
 
   .email-booking-link,
   .bio-name {
     color: var(--accent);
-    text-shadow: 0 0 12px rgb(56 189 248 / 25%);
   }
 
   .genres span {
@@ -503,7 +493,6 @@ const soundcloudEmbedUrl = (url: string) =>
     border: 1px solid var(--accent);
     border-radius: 99px;
     font-size: 0.8rem;
-    box-shadow: 0 0 12px rgb(56 189 248 / 25%);
   }
 
   .photo-frame {
