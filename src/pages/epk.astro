@@ -1,6 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
+const bookingEmail = "hello@faizan.fun";
+
 const mixes = [
   {
     title: "Faizan Puts You On, Vol. 2",
@@ -14,32 +16,6 @@ const mixes = [
 
 const soundcloudEmbedUrl = (url: string) =>
   `https://w.soundcloud.com/player/?url=${encodeURIComponent(url)}&color=%2338bdf8&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=false`;
-
-const venues = [
-  {
-    name: "Mood Ring",
-    location: "Ridgewood, Brooklyn",
-    role: "Peak Slot",
-  },
-  {
-    name: "abunDANCE × Daytimers NYC",
-    location: "Honey's / Bushwick, NY",
-    role: "Curator / Resident",
-  },
-  {
-    name: "Eris Evolution",
-    location: "Williamsburg, Brooklyn",
-    role: "Direct Support",
-  },
-  {
-    name: "Bossa Nova Civic Club & Jupiter Disco",
-    location: "Bushwick, Brooklyn",
-    role: "Guest Sets",
-  },
-];
-
-const bio =
-  "Brooklyn DJ and selector weaving South Asian percussion into UK garage, broken beat, and bass-led club music.";
 
 ---
 
@@ -55,29 +31,35 @@ const bio =
       <a class="wordmark" href="/" aria-label="Faizan home">faizan</a>
       <nav class="primary-nav" aria-label="Page sections">
         <a href="#bio">About</a>
-        <a href="#venues">Gigs</a>
-        <a href="#mixes">Mixes</a>
+        <a href="#mixes">Music</a>
         <a href="#press">Press</a>
       </nav>
     </div>
   </header>
 
   <main id="main" class="page-content">
-    <section id="bio" class="section-rule">
+    <section aria-labelledby="hero-title">
       <div class="hero">
         <div class="hero-copy">
           <p class="eyebrow">DJ/Producer · BROOKLYN, NY</p>
-          <h1>faizan</h1>
-          <p class="hero-subtitle">South Asian percussion, UK garage, and bass-led club music.</p>
+          <h1 id="hero-title">faizan</h1>
+          <p class="hero-subtitle">Yet another transplant living in Brooklyn and spending way too much time in Bushwick</p>
           <div class="genres" aria-label="Genres">
-            <span>South Asian Club</span>
-            <span>UK Garage</span>
-            <span>Broken Beat</span>
+            <span>UKG</span>
+            <span>South Asian</span>
+            <span>Bass</span>
           </div>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#mixes">Listen to Mixes</a>
-            <a class="button button-muted" href="mailto:bookings@faizan.fun">Book faizan</a>
-          </div>
+          <p class="booking-cta">
+            DM{' '}
+            <a
+              class="booking-text-link instagram-booking-link"
+              href="https://www.instagram.com/faizanv"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="DM faizan on Instagram for bookings"
+            >@faizanv</a> or email <a class="booking-text-link email-booking-link" href={`mailto:${bookingEmail}`}>{bookingEmail}</a>
+            {' '}for bookings
+          </p>
         </div>
 
         <figure class="photo-frame hero-photo">
@@ -89,37 +71,39 @@ const bio =
           />
         </figure>
       </div>
-
-      <div class="bio-copy">
-        <h2>About</h2>
-        <p>{bio}</p>
-      </div>
     </section>
 
-    <section id="venues" class="content-section section-rule">
+    <section id="bio" class="content-section section-rule bio-section">
       <div class="section-heading">
         <div>
-          <p class="section-kicker">02 / Experience</p>
-          <h2>Venues &amp; Gigs</h2>
+          <p class="section-kicker">// About</p>
+          <div class="bio-title-row">
+            <h2>Bio</h2>
+            <div class="copy-bio-controls">
+              <button class="copy-bio-button" type="button" aria-label="Copy bio text" title="Copy bio text" data-copied="false">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="8" y="8" width="12" height="12" rx="1.5"></rect>
+                  <path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3"></path>
+                </svg>
+              </button>
+              <span class="copy-bio-status" role="status"></span>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="venue-grid">
-        {venues.map((venue) => (
-          <article class="venue-card">
-            <h3>{venue.name}</h3>
-            <p class="venue-meta">{venue.location} · {venue.role}</p>
-          </article>
-        ))}
+      <div class="bio-copy">
+        <p>With a background in percussion and Pakistani music, <span class="bio-name">faizan</span> loves nothing more than playing a Qawwali remix at the club in between face melting bangers. His sets move between South Asian sounds, modern UKG, and bass, built for high-energy rooms and dancefloor moments that catch people off guard.</p>
+        <p>He has been performing in New York since 2022 with sets at Elsewhere and Eris, and remixes featured on The Lot Radio and BBC Asian Network.</p>
       </div>
     </section>
 
     <section id="mixes" class="content-section section-rule">
       <div class="section-heading">
         <div>
-          <p class="section-kicker">03 / Listen</p>
-          <h2>Featured Mixes</h2>
+          <p class="section-kicker">// Music</p>
         </div>
       </div>
+      <p class="also">More on SoundCloud: <a href="https://soundcloud.com/faizanv" target="_blank" rel="noopener noreferrer">faizanv ↗</a></p>
       <div class="mix-grid">
         {mixes.map((mix) => (
           <article class="mix-card">
@@ -139,7 +123,6 @@ const bio =
           </article>
         ))}
       </div>
-      <p class="also">More on SoundCloud: <a href="https://soundcloud.com/faizanv" target="_blank" rel="noopener noreferrer">faizanv ↗</a></p>
     </section>
 
     <section id="press" class="content-section section-rule">
@@ -156,7 +139,7 @@ const bio =
           </div>
           <div class="press-card-footer">
             <h3>Press portrait</h3>
-            <a class="button button-small button-muted" href="mailto:bookings@faizan.fun?subject=Press%20photo%20request">Request photo</a>
+            <a class="button button-small button-muted" href={`mailto:${bookingEmail}?subject=Press%20photo%20request`}>Request photo</a>
           </div>
         </article>
         <article class="press-card wordmark-card">
@@ -176,7 +159,7 @@ const bio =
   <footer class="site-footer">
     <span>Brooklyn, NY</span>
     <nav aria-label="Contact and profiles">
-      <a href="mailto:bookings@faizan.fun">bookings@faizan.fun</a>
+      <a href={`mailto:${bookingEmail}`}>{bookingEmail}</a>
       <a href="https://soundcloud.com/faizanv" target="_blank" rel="noopener noreferrer">SoundCloud ↗</a>
       <a href="https://ra.co" target="_blank" rel="noopener noreferrer">RA ↗</a>
     </nav>
@@ -192,6 +175,27 @@ const bio =
     link.click();
     URL.revokeObjectURL(url);
   }
+
+  const copyBioButton = document.querySelector<HTMLButtonElement>(".copy-bio-button");
+  const copyBioStatus = document.querySelector<HTMLElement>(".copy-bio-status");
+
+  copyBioButton?.addEventListener("click", async () => {
+    copyBioButton.dataset.copied = "false";
+    if (copyBioStatus) copyBioStatus.textContent = "";
+    const bioText = Array.from(document.querySelectorAll<HTMLParagraphElement>("#bio .bio-copy p"))
+      .map((paragraph) => paragraph.innerText.trim())
+      .filter(Boolean)
+      .join("\n\n");
+
+    try {
+      if (!bioText) throw new Error("No bio text was found.");
+      await navigator.clipboard.writeText(bioText);
+      copyBioButton.dataset.copied = "true";
+    } catch (error) {
+      console.error("Failed to copy the bio to the clipboard.", error);
+      if (copyBioStatus) copyBioStatus.textContent = "Copy failed";
+    }
+  });
 
   document.querySelectorAll<HTMLButtonElement>(".download-wordmark").forEach((button) => {
     button.addEventListener("click", () => {
@@ -307,8 +311,7 @@ const bio =
   .primary-nav,
   .button,
   .section-kicker,
-  .site-footer,
-  .venue-meta {
+  .site-footer {
     font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
   }
 
@@ -316,6 +319,55 @@ const bio =
   .site-footer nav {
     display: flex;
     align-items: center;
+  }
+
+  .bio-title-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .bio-title-row h2 {
+    margin-bottom: 0;
+  }
+
+  .copy-bio-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .copy-bio-button {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+  }
+
+  .copy-bio-button svg {
+    width: 1.15rem;
+    height: 1.15rem;
+  }
+
+  .copy-bio-button[data-copied="true"] {
+    color: var(--accent);
+  }
+
+  .copy-bio-status {
+    color: var(--accent);
+    font-size: 0.7rem;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+
+  .copy-bio-status:empty {
+    display: none;
   }
 
   .primary-nav {
@@ -417,19 +469,40 @@ const bio =
   }
 
   .genres {
-    margin: 1.35rem 0 1.75rem;
+    margin: 1.35rem 0 2.5rem;
+  }
+
+  .hero-actions {
+    margin-top: 1rem;
+  }
+
+  .booking-cta {
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 700;
+  }
+
+  .booking-text-link {
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+
+  .instagram-booking-link {
+    color: #f472b6;
+    text-shadow: 0 0 10px rgb(244 114 182 / 65%);
+  }
+
+  .email-booking-link,
+  .bio-name {
+    color: var(--accent);
+    text-shadow: 0 0 12px rgb(56 189 248 / 25%);
   }
 
   .genres span {
     padding: 0.25rem 0.75rem;
-    border: 1px solid var(--border);
+    border: 1px solid var(--accent);
     border-radius: 99px;
     font-size: 0.8rem;
-    transition: border-color 160ms ease, box-shadow 160ms ease;
-  }
-
-  .genres span:hover {
-    border-color: var(--accent);
     box-shadow: 0 0 12px rgb(56 189 248 / 25%);
   }
 
@@ -481,7 +554,6 @@ const bio =
   }
 
   .mix-grid,
-  .venue-grid,
   .press-grid {
     display: grid;
     gap: 1.1rem;
@@ -492,7 +564,6 @@ const bio =
   }
 
   .mix-card,
-  .venue-card,
   .press-card {
     border: 1px solid var(--border);
     border-radius: 0;
@@ -515,33 +586,18 @@ const bio =
     border: 0;
   }
 
-  .venue-grid {
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  }
-
-  .venue-card {
-    padding: 1.35rem;
-    border-top: 3px solid var(--accent);
-  }
-
-  .venue-card h3,
   .press-card-footer h3 {
     margin: 0;
     font-size: 1.25rem;
     line-height: 1.4;
   }
 
-  .venue-meta {
-    margin: 0.35rem 0 0;
-    color: var(--muted);
-    font-size: 0.8rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-  }
-
   .bio-copy {
     max-width: 680px;
-    padding: 0 0 4.375rem;
+  }
+
+  .bio-section {
+    border-top: 1px solid var(--border);
   }
 
   .bio-copy p {
@@ -550,10 +606,12 @@ const bio =
     line-height: 1.7;
   }
 
+  .bio-copy p + p {
+    margin-top: 1rem;
+  }
+
   .also {
-    margin: 1.75rem 0 0;
-    color: var(--muted);
-    font-size: 0.85rem;
+    margin: 1.75rem 0;
   }
 
   .also a {
@@ -649,7 +707,6 @@ const bio =
       padding-block: 3rem;
     }
 
-    .venue-grid,
     .press-grid {
       grid-template-columns: 1fr;
     }
