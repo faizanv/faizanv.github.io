@@ -133,14 +133,35 @@ const soundcloudEmbedUrl = (url: string) =>
           He has been performing in New York since 2022 with sets at Elsewhere, Unveiled,
           and Eris. His remixes have been featured on The Lot Radio and BBC Asian Network.
         </p>
-        <p>
-          Member of{' '}
-          <a
-            href="https://www.instagram.com/daytimers_nyc/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >DAYTIMERS NYC</a>.
-        </p>
+      </div>
+    </section>
+
+    <section class="community-section section-rule" aria-label="Curation and community">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">// Curation &amp; Community</p>
+        </div>
+      </div>
+      <div class="community-grid">
+        <article class="community-card">
+          <h3>
+            <a
+              href="https://www.instagram.com/daytimers_nyc/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >DAYTIMERS NYC</a>
+          </h3>
+          <p>Active member of the New York chapter, contributing to the collective’s mission of spotlighting and supporting South Asian underground club culture.</p>
+        </article>
+        <article class="community-card">
+          <h3><a href="/abunDANCE-2026/">abunDANCE</a></h3>
+          <p>
+            Organizer of a charity club series—drawing{' '}
+            <strong>200+ attendees</strong> and raising{' '}
+            <strong>$5,000+ for <a href="https://www.drumnyc.org/" target="_blank" rel="noopener noreferrer">DRUM</a></strong>
+            {' '}at its debut party.
+          </p>
+        </article>
       </div>
     </section>
 
@@ -378,7 +399,8 @@ const soundcloudEmbedUrl = (url: string) =>
 
   .primary-nav,
   .section-kicker,
-  .site-footer {
+  .site-footer,
+  .media-slide figcaption {
     font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
   }
 
@@ -542,7 +564,9 @@ const soundcloudEmbedUrl = (url: string) =>
   }
 
   .email-booking-link,
-  .bio-name {
+  .bio-name,
+  .bio-copy a,
+  .also a {
     color: var(--accent);
   }
 
@@ -610,7 +634,8 @@ const soundcloudEmbedUrl = (url: string) =>
     gap: 1.1rem;
   }
 
-  .mix-card {
+  .mix-card,
+  .community-card {
     border: 1px solid var(--border);
     background: var(--surface);
     padding: 1.25rem;
@@ -636,14 +661,44 @@ const soundcloudEmbedUrl = (url: string) =>
     border-top: 1px solid var(--border);
   }
 
-  .bio-copy p {
+  .community-section {
+    padding-block: 2.5rem;
+  }
+
+  .community-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .community-card h3 {
+    margin-bottom: 0.65rem;
+    color: var(--accent);
+    font-size: 0.95rem;
+    letter-spacing: 0.06em;
+  }
+
+  .bio-copy p,
+  .community-card p {
     margin: 0;
     color: #d0cfca;
+  }
+
+  .community-card p {
+    line-height: 1.6;
+  }
+
+  .community-card strong {
+    color: var(--accent);
+    white-space: nowrap;
+  }
+
+  .bio-copy p {
     line-height: 1.7;
   }
 
-  .bio-copy a {
-    color: var(--accent);
+  .bio-copy a,
+  .community-card a {
     text-decoration: underline;
     text-underline-offset: 0.15em;
   }
@@ -654,10 +709,6 @@ const soundcloudEmbedUrl = (url: string) =>
 
   .also {
     margin: 1.75rem 0;
-  }
-
-  .also a {
-    color: var(--accent);
   }
 
   .media-slide {
@@ -676,7 +727,6 @@ const soundcloudEmbedUrl = (url: string) =>
 
   .media-slide figcaption {
     color: var(--muted);
-    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
     font-size: 0.8rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -744,6 +794,14 @@ const soundcloudEmbedUrl = (url: string) =>
 
     .content-section {
       padding-block: 3rem;
+    }
+
+    .community-section {
+      padding-block: 2rem;
+    }
+
+    .community-grid {
+      grid-template-columns: 1fr;
     }
 
     .media-slide {
