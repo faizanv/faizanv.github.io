@@ -96,6 +96,7 @@ const soundcloudEmbedUrl = (url: string) =>
             >@faizanv</a> or email <a class="booking-text-link email-booking-link" href={`mailto:${bookingEmail}`}>{bookingEmail}</a>
             {' '}for bookings
           </p>
+          <a class="epk-pdf-link" href="/epk-pdf">Download EPK PDF ↗</a>
         </div>
 
         <figure class="photo-frame hero-photo">
@@ -552,6 +553,14 @@ const soundcloudEmbedUrl = (url: string) =>
     margin: 0;
     font-size: 1.125rem;
     font-weight: 700;
+  }
+
+  .epk-pdf-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
   }
 
   .booking-text-link {
