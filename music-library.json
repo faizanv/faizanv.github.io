@@ -810,11 +810,25 @@
   "BeatsPerMinute": 135
 },
 {
+  "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Tor - Foxglove.mp3",
+  "Title": "Foxglove",
+  "Artist": "Tor",
+  "InitialKey": "8m",
+  "BeatsPerMinute": 120
+},
+{
   "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Baalti & Lapgan - Ipa Ma.mp3",
   "Title": "Ipa Ma",
   "Artist": "Baalti; Lapgan",
   "InitialKey": "6m",
   "BeatsPerMinute": 125
+},
+{
+  "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Oppidan - DARWIN.mp3",
+  "Title": "DARWIN",
+  "Artist": "Oppidan",
+  "Initialkey": "B",
+  "BeatsPerMinute": 141
 },
 {
   "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Travis Scott - STARGAZING.mp3",
@@ -969,6 +983,13 @@
   "Artist": "Disclosure, Zedd",
   "InitialKey": "1m",
   "BeatsPerMinute": 124
+},
+{
+  "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Yo Speed - No Brakes.mp3",
+  "Title": "No Brakes",
+  "Artist": "Yo Speed",
+  "Initialkey": "FSharp",
+  "BeatsPerMinute": 140
 },
 {
   "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Oppidan, camoufly - hold tight.mp3",
@@ -1308,6 +1329,13 @@
   "Artist": "Skrillex",
   "InitialKey": "11m",
   "BeatsPerMinute": 130
+},
+{
+  "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/fromclay - TU.mp3",
+  "Title": "TU",
+  "Artist": "fromclay",
+  "InitialKey": "9m",
+  "BeatsPerMinute": 135
 },
 {
   "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Yaşar Akpençe - Sound of Darbuka.mp3",
@@ -1680,7 +1708,7 @@
   "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Ahadadream, ance. - Koi Si.mp3",
   "Title": "Koi Si (Original Mix)",
   "Artist": "Ahadadream, ance.",
-  "InitialKey": "Eb Minor",
+  "InitialKey": "7m",
   "BeatsPerMinute": 135
 },
 {
@@ -2061,6 +2089,13 @@
   "Artist": "Mar'One, Rihana",
   "InitialKey": "6m",
   "BeatsPerMinute": 130
+},
+{
+  "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Ahadadream, Sidd - Stage.mp3",
+  "Title": "Stage",
+  "Artist": "Ahadadream, Sidd",
+  "InitialKey": "12m",
+  "BeatsPerMinute": 134
 },
 {
   "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/4K - My Soul.mp3",
@@ -3144,6 +3179,13 @@
   "BeatsPerMinute": 142
 },
 {
+  "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/O'Flynn - Sekete.mp3",
+  "Title": "Sekete",
+  "Artist": "O'Flynn;Swordman Kitala",
+  "InitialKey": "12m",
+  "BeatsPerMinute": 133
+},
+{
   "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/KAYTRANADA - CHANCES.mp3",
   "Title": "CHANCES",
   "Artist": "KAYTRANADA",
@@ -4192,6 +4234,13 @@
   "Artist": "Faizan",
   "InitialKey": "11m",
   "BeatsPerMinute": 130
+},
+{
+  "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Cameo Blush - 4 Me.mp3",
+  "Title": "4 Me",
+  "Artist": "Cameo Blush",
+  "InitialKey": "7m",
+  "BeatsPerMinute": 139
 },
 {
   "SourceFile": "/Users/faizanv/Music/Music Library/Music For DJing/Sawhneyboi - Folkstep.mp3",
